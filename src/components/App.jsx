@@ -1,21 +1,19 @@
-import '../styles/App.css'
-// import { useNavigate } from "react-router-dom"
-import { Routes, Route, Link } from 'react-router-dom'
+import React from 'react'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import LandingPage from './Landingpage'
+import Home from './Home'
 import About from "./About"
 import Projects from "./Projects"
 import Contacts from "./Contacts"
-import Home from './Home'
+import '../styles/customstyles.css'
 
 function App() {
-  // const navigate = useNavigate()
-
-  // const routeToSite = () => {
-  //   navigate('home')
-  // }
+  const location = useLocation()
+  const isLandingPage = location.pathname === '/';
 
   return (
     <div>
-      <nav>
+      <nav className={isLandingPage ? 'hide-nav' : ''}>
         <h1>Mikra Portfolio Site</h1>
         <div className='nav-links'>
           {/* 👉 STEP 3 - Make Links to navigate us Home (`/`) and Shop (`items-list`) */}
@@ -25,20 +23,16 @@ function App() {
           <Link to='contacts' >Contacts</Link>
         </div>
       </nav>
-
-      {/* 👉 STEP 4 - Build Routes, and a Route for each of the components imported at the top */}
-      {/* Note that the components will need some props in order to work */}
-      {/* Note that the path that renders Item has a URL parameter */}
-      {/* Note that the path that renders Item must support nested routes */}
       <Routes>
+        <Route path='/' element={<LandingPage />} />
         <Route path='home' element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='projects' element={<Projects />} />
         <Route path='contacts' element={<Contacts />} />
+        {/* Add other routes for About, Projects, Contacts if needed */}
       </Routes>
-      
     </div>
   )
 }
 
-export default App
+export default App;
