@@ -1,10 +1,10 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  /* padding: 0.5rem; I comment it out for now. */
+  /* padding: 0.5rem; I comment it out for now.  */
   text-align: center;
 }
-
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -40,3 +40,4 @@
 .read-the-docs {
   color: #888;
 }
+*/
