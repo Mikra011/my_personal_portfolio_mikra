@@ -1,0 +1,54 @@
+.text-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    text-align: center;
+    /* Ensures content is centered horizontally */
+}
+
+.animated-welcome {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.5em;
+    overflow: hidden;
+    background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    animation: animate 4.5s linear 1, animateColor 1s linear 1 forwards;
+    animation-delay: 0s, 4s;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+}
+
+.animated-welcome::after {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 3vw;
+    letter-spacing: 0.5em;
+    color: rgba(0, 0, 0, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+@keyframes animateColor {
+    0% {
+        color: rgba(0, 0, 0, 0); /* Start with transparent text */
+    }
+    100% {
+        color: rgba(0, 0, 0, 1); /* End with black text */
+    }
+}
