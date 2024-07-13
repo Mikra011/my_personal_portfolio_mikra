@@ -6,7 +6,7 @@ import About from "./About"
 import Projects from "./Projects"
 import Contacts from "./Contacts"
 import Navbar from './Navbar'
-import '../styles/customstyles.css'
+import '../styles/app.css'
 import '../styles/index.css'
 
 export default function App() {
