@@ -6,7 +6,6 @@
   left: 50%;
   bottom: 0px;
   animation: arrow 0.5s 1s infinite ease-out alternate;
-
 }
 
 .arrow-down:hover {
