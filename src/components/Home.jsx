@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Home() {
     return (
-        <div>
+        <div className="h-screen bg-spring-100">
             <p>
                 Hi, I&apos;m Robert, a passionate and dedicated aspiring Full Stack Developer. I specialize in creating dynamic and responsive web applications using technologies like JavaScript, React, Node.js, and SQL. I&apos;m eager to bring my skills and enthusiasm to a forward-thinking development team.
             </p>

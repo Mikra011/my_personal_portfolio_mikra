@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className={isLandingPage 
     ? 'hidden' 
-    : 'bg-gray-100 md:flex md:justify-between md:items-canter'}>
+    : 'bg-oasis-600 md:flex md:justify-between md:items-canter'}>
       <div className='bg-gray-100 px-3 py-3 flex justify-between items-center'>
         <section>
           <h1 
@@ -33,8 +33,8 @@ export default function Navbar() {
         </section>
         <section className="md:hidden">
           <button onClick={toggleIsOpen} 
-          className="navbar-burger flex items-center text-blue-400 
-          px-3 py-1 hover:text-blue-900 focus:text-yellow-300" >
+          className="navbar-burger flex items-center text-amethyst-400 
+          px-3 py-1 hover:text-amethyst-900 focus:text-spring-300" >
             <svg className="block h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               {isOpen ? (
                 <path
@@ -57,9 +57,9 @@ export default function Navbar() {
         {menuItems.map(item => (
           <li key={item.to}>
             <Link to={item.to} className="
-            m-1 block rounded py-1 text-sm text-gray-300 
-            hover:text-gray-500 hover:bg-blue-100 
-            focus:text-yellow-300"
+            m-1 block rounded py-1 text-sm text-scarlet-600 
+            hover:text-spring-700 hover:bg-amethyst-100 
+            focus:text-amethyst-600"
             >{item.text}</Link>
           </li>
         ))}
@@ -70,9 +70,9 @@ export default function Navbar() {
         {menuItems.map(item => (
           <li key={item.to}>
             <Link to={item.to} className="
-            m-1 block rounded p-2 text-sm text-gray-300 
-            hover:text-gray-500 hover:bg-blue-100 
-            focus:text-yellow-300"
+            m-1 block rounded p-2 text-sm text-scarlet-600 
+            hover:text-spring-700 hover:bg-amethyst-100 
+            focus:text-amethyst-600"
             >{item.text}</Link>
           </li>
         ))}

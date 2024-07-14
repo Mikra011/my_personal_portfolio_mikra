@@ -10,13 +10,13 @@ export default function LandingPage() {
         navigate('home')
     }
     return (
-        <div className="landing-page">
+        <div className="bg-spring-100">
             <section id='welcome-section' className='h-screen'>
                 <div className='h-[70vh] flex flex-col justify-between items-center '>
                     <div className="m-0 p-0 flex justify-center items-center h-40 text-center">
                         <h1 className="animated-welcome">Welcome To My Portfolio</h1>
                     </div>
-                    <button onClick={routeToSite} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'>
+                    <button onClick={routeToSite} className='bg-amethyst-400 hover:bg-amethyst-500 text-white font-bold py-2 px-4 rounded-full'>
                         Continue as Guest
                     </button>
                     <div>
