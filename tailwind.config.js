@@ -54,6 +54,7 @@ export default {
         900: '#06231D',
       },
     },
+    //
   },
   plugins: [],
 }
