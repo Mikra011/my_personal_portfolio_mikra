@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav className={isLandingPage 
     ? 'hidden' 
     : 'bg-oasis-600 md:flex md:justify-between md:items-canter'}>
-      <div className='bg-gray-100 px-3 py-3 flex justify-between items-center'>
+      <div className='px-3 py-3 flex justify-between items-center'>
         <section>
           <h1 
           className="text-lg md:text-xl lg:text-2xl font-bold 
@@ -57,7 +57,7 @@ export default function Navbar() {
         {menuItems.map(item => (
           <li key={item.to}>
             <Link to={item.to} className="
-            m-1 block rounded py-1 text-sm text-scarlet-600 
+            m-1 block rounded-full py-1 text-sm text-scarlet-600 
             hover:text-spring-700 hover:bg-amethyst-100 
             focus:text-amethyst-600"
             >{item.text}</Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
         {menuItems.map(item => (
           <li key={item.to}>
             <Link to={item.to} className="
-            m-1 block rounded p-2 text-sm text-scarlet-600 
+            m-1 block rounded-full p-2 text-sm text-scarlet-600 
             hover:text-spring-700 hover:bg-amethyst-100 
             focus:text-amethyst-600"
             >{item.text}</Link>

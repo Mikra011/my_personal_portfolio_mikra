@@ -1,3 +1,20 @@
+#welcome-section {
+    position: relative;
+}
+
+.welcome-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 50;
+}
+
 .animated-welcome {
     position: relative;
     font-family: sans-serif;
@@ -5,13 +22,18 @@
     font-size: 1.5em;
     letter-spacing: 0.5em;
     overflow: hidden;
-    background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+    background: linear-gradient(90deg, #EEFCF9, #06231D, #EEFCF9);
     background-repeat: no-repeat;
     background-size: 70%;
-    animation: animate 4.5s linear 1, animateColor 1s linear 1 forwards;
+    animation: animate 4.5s linear 1, fadeOut 0.5s linear 1 forwards;
     animation-delay: 0s, 4s;
     background-clip: text;
     color: rgba(0, 0, 0, 0);
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
 }
 
 @keyframes animate {
@@ -24,11 +46,12 @@
     }
 }
 
-@keyframes animateColor {
+@keyframes fadeOut {
     0% {
-        color: rgba(0, 0, 0, 0); /* Start with transparent text */
+        opacity: 1; /* Start with opaque text */
     }
     100% {
-        color: rgba(0, 0, 0, 1); /* End with black text */
+        opacity: 0; /* End with transparent text */
     }
 }
+
