@@ -8,12 +8,14 @@ import Contacts from "./Contacts"
 import Navbar from './Navbar'
 import '../styles/app.css'
 import '../styles/index.css'
+import { useDarkMode } from './hooks/useDarkMode'
 
 export default function App() {
+    const [darkMode, setDarkMode] = useDarkMode(true)
 
     return (
-        <div>
-            <Navbar />
+        <div className={darkMode ? "bg-spring-100" : "bg-amethyst-900"}>
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
             <Routes>
                 <Route path='/' element={<LandingPage />} />
                 <Route path='home' element={<Home />} />

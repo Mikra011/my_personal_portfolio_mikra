@@ -23,7 +23,7 @@ export default function LandingPage() {
         navigate('home')
     }
     return (
-        <div className="bg-spring-100">
+        <div className="">
             <section id='welcome-section' className='h-screen'>
                 {showWelcome && (
                     <div className={`welcome-container bg-spring-100 m-0 p-0 flex justify-center items-center text-center ${fadeOut ? 'fade-out' : ''}`}>
