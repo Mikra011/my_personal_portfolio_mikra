@@ -11,7 +11,7 @@ import '../styles/index.css'
 import { useDarkMode } from './hooks/useDarkMode'
 
 export default function App() {
-    const [darkMode, setDarkMode] = useDarkMode(true)
+    const [darkMode, setDarkMode] = useDarkMode(false)
 
     return (
         <div className={darkMode ? "bg-spring-100" : "bg-amethyst-900"}>
