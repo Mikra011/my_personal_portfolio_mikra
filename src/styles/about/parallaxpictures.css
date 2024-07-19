@@ -30,15 +30,15 @@
     animation-timeline: scroll(root);
 }
 
-.column:is(:nth-of-type(1), :nth-of-type(3)) {
+.column:is(:nth-of-type(1)) {
     --origin: calc(var(--gap) * -1);
     --destination: calc(var(--card-height) * 1.5 + var(--gap));
 }
 
-/* .column:is(:nth-of-type(1), :nth-of-type(3)) {
+.column:is(:nth-of-type(3)) {
     --origin: calc(var(--gap) * -2);
-    --destination: calc(var(--card-height) * 3.4 + var(--gap));
-} */
+    --destination: calc(var(--card-height) * 1.6 + var(--gap));
+}
 
 @keyframes scale {
     0% {
