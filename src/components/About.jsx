@@ -25,10 +25,8 @@ export default function About() {
                         <img src="https://picsum.photos/500/700?random=3-4" alt="" />
                         <img src="https://picsum.photos/500/700?random=3-5" alt="" />
                         <img src="https://picsum.photos/500/700?random=3-6" alt="" />
-                        <img src="https://picsum.photos/500/700?random=3-7" alt="" />
                     </div>
                     <div className="column">
-                        <img src="https://picsum.photos/500/700?random=4-1" alt="" />
                         <img src="https://picsum.photos/500/700?random=4-2" alt="" />
                         <img src="https://picsum.photos/500/700?random=4-3" alt="" />
                         <img src="https://picsum.photos/500/700?random=4-4" alt="" />
@@ -38,7 +36,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
         </div>
     )
 }

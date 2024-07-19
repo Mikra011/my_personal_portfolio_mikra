@@ -36,8 +36,8 @@
 }
 
 .column:is(:nth-of-type(3)) {
-    --origin: calc(var(--gap) * -2);
-    --destination: calc(var(--card-height) * 1.6 + var(--gap));
+    --destination: calc(var(--gap) * -2);
+    --origin: calc(var(--card-height) * 1.6 + var(--gap));
 }
 
 @keyframes scale {
@@ -50,7 +50,7 @@
     }
 }
 
-img {
+.column img {
     display: block; 
     max-width: auto; 
     max-height: 100%; 
