@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -58,5 +59,10 @@ export default {
       // more if needed
     },
   },
+  // variants: {
+  //   extend: {
+  //     textColor: ['dark'],
+  //   },
+  // },
   plugins: [],
 }

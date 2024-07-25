@@ -14,15 +14,17 @@ export default function App() {
     const [darkMode, setDarkMode] = useDarkMode(false)
 
     return (
-        <div className={darkMode ? "bg-spring-100" : "bg-amethyst-900"}>
-            <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
-            <Routes>
-                <Route path='/' element={<LandingPage />} />
-                <Route path='home' element={<Home />} />
-                <Route path='about' element={<About />} />
-                <Route path='projects' element={<Projects />} />
-                <Route path='contacts' element={<Contacts />} />
-            </Routes>
+        <div className={darkMode ? "dark" : ""}>
+            <div className="bg-spring-100 dark:bg-amethyst-900 text-amethyst-900 dark:text-spring-100">
+                <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+                <Routes>
+                    <Route path='/' element={<LandingPage />} />
+                    <Route path='home' element={<Home />} />
+                    <Route path='about' element={<About />} />
+                    <Route path='projects' element={<Projects />} />
+                    <Route path='contacts' element={<Contacts />} />
+                </Routes>
+            </div>
         </div>
     )
 }

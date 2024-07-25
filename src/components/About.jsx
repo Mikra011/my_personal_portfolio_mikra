@@ -36,6 +36,12 @@ export default function About() {
                     </div>
                 </div>
             </section>
+            <section className="h-screen">
+
+            </section>
+            <section className="h-screen">
+
+            </section>
         </div>
     )
 }

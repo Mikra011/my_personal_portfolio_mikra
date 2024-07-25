@@ -13,3 +13,12 @@ This is my personal portfolio website.
 - react
 - vite
 - tailwind
+
+## Colors:
+
+I have used figma color wheel to generate my color scheme, I have choosen to use a square palette type
+
+## Fonts:
+
+I used an adobe font pack:
+https://fonts.adobe.com/collections/adobe-stock-new-naturalism-fonts
