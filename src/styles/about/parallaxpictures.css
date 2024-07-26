@@ -15,6 +15,8 @@
 
 .row img {
     margin-right: 10px;
+    border-radius: 10px;
+    width: auto;
 }
 
 .row:not( :nth-of-type(2)) {
