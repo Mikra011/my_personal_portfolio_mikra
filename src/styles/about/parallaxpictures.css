@@ -1,60 +1,43 @@
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-}
-
-:root {
-    --gap: 1rem;
-    --card-width: clamp(100px, 18vw, 18vw);
-    --card-aspect-ratio: 5 / 8;
-    --card-height: calc(var(--card-width) * (8 / 5));
-}
 
 .grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(3, var(--card-width));
-    gap: 1rem;
-    transform: rotate(80deg);
-    overflow: hidden;
+    transform: translateX(-500px) translateY(50px) rotate(-5deg);
 }
 
-.column {
-    display: grid;
-    gap: 1rem;
-    align-content: start;
+.row {
+    display: flex;
+    margin-bottom: 10px;
+    height: 200px;
 }
 
-.column:not(:nth-of-type(2)) {
+.row img {
+    margin-right: 10px;
+}
+
+.row:not( :nth-of-type(2)) {
     animation: scale 1s linear both;
     animation-timeline: scroll(root);
 }
 
-.column:is(:nth-of-type(3)) {
-    --origin: calc(var(--gap) * -1);
-    --destination: calc(var(--card-height) * 1.5 + var(--gap));
+.row:is( :nth-of-type(1)) {
+    --origin: 0%;
+    --destination: -50%;
 }
 
-.column:is(:nth-of-type(1)) {
-    --destination: calc(var(--gap) * -2);
-    --origin: calc(var(--card-height) * 1.6 + var(--gap));
+.row:is( :nth-of-type(3)) {
+    --origin: 0%;
+    --destination: 50%;
 }
 
 @keyframes scale {
     0% {
-        transform: translateY(var(--origin, 0%));
+        transform: translateX(var(--origin, 0%));
     }
 
     100% {
-        transform: translateY(var(--destination, -50%));
+        transform: translateX(var(--destination, -50%));
     }
-}
-
-.column img {
-    display: block; 
-    max-width: auto; 
-    max-height: 100%; 
-    width: 100%;  
-    border-radius: 10px;
 }

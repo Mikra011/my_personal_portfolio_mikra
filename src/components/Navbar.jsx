@@ -27,7 +27,7 @@ export default function Navbar(props) {
   return (
     <nav className={isLandingPage
       ? 'hidden'
-      : 'md:flex md:justify-between md:items-center'}>
+      : 'bg-spring-100 dark:bg-amethyst-900 fixed top-0 w-full z-50 md:flex md:justify-between md:items-center'}>
       <div className='px-3 py-3 flex justify-between items-center'>
         {/* <section>
           <h1
