@@ -34,27 +34,27 @@ export default function LandingPage() {
                     <button onClick={routeToSite} className='bg-amethyst-400 hover:bg-amethyst-500 text-white font-bold py-2 px-4 rounded-full'>
                         Continue as Guest
                     </button>
-                    <div>
+                    {/* <div>
                         <h1>Or</h1>
                     </div>
                     <a href='#login-section'>
                         <button
                             className='bg-amethyst-400 hover:bg-amethyst-500 text-white font-bold py-2 px-4 rounded-full'>Sign Up / Register
                         </button>
-                    </a>
+                    </a> */}
                 </div>
-                <div>
+                {/* <div>
                     <a href='#login-section' className="arrow-down-button">
                         <div className="arrow-down">
                             <div className="left"></div>
                             <div className="right"></div>
                         </div>
                     </a>
-                </div>
+                </div> */}
             </section>
-            <section id='login-section' className='h-screen flex justify-center items-center'>
+            {/* <section id='login-section' className='h-screen flex justify-center items-center'>
                 <p>THIS IS THE LOGIN SECTION</p>
-            </section>
+            </section> */}
         </div>
     )
 }
