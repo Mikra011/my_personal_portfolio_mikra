@@ -21,68 +21,68 @@ This project features both dark and light color schemes to enhance usability and
 ### Light Theme
 The light theme is designed for use in well-lit environments, providing a clean and bright interface. Below is an overview of the primary colors used in the light theme:
 
--   #### Primary Color
+#### Primary Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for main elements such as headers, primary buttons, and key highlights.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for main elements such as headers, primary buttons, and key highlights.
 
--   #### Secondary Color
+#### Secondary Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for secondary buttons, background elements, and accentuating details.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for secondary buttons, background elements, and accentuating details.
 
--   #### Accent Color
+#### Accent Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for call-to-action buttons, important highlights, and special features.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for call-to-action buttons, important highlights, and special features.
 
--   #### Background Color
+#### Background Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for the main background of the layout to ensure text and other elements stand out.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for the main background of the layout to ensure text and other elements stand out.
 
--   #### Text Color
+#### Text Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for primary text content to ensure readability and contrast against the background.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for primary text content to ensure readability and contrast against the background.
 
 ### Dark Theme
 The dark theme is tailored for low-light environments, providing a sleek and eye-friendly interface. Here’s a breakdown of the primary colors for the dark theme:
 
--   #### Primary Color
+#### Primary Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for main elements such as headers, primary buttons, and key highlights.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for main elements such as headers, primary buttons, and key highlights.
 
--   #### Secondary Color
+#### Secondary Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for secondary buttons, background elements, and accentuating details.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for secondary buttons, background elements, and accentuating details.
 
--   #### Accent Color
+#### Accent Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for call-to-action buttons, important highlights, and special features.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for call-to-action buttons, important highlights, and special features.
 
--   #### Background Color
+#### Background Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for the main background of the layout to ensure text and other elements stand out.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for the main background of the layout to ensure text and other elements stand out.
 
--   #### Text Color
+#### Text Color
 
-    Hex: #HEXCODE
-    RGB: (R, G, B)
-    Used for primary text content to ensure readability and contrast against the background.
+    - Hex: #HEXCODE
+    - RGB: (R, G, B)
+    - Used for primary text content to ensure readability and contrast against the background.
 
 ### Usage Guidelines (I kept it here for reference)
 Primary Color: Use this color prominently in both themes for headers, main navigation, and key calls to action to ensure they stand out and capture attention.
