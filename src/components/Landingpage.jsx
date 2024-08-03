@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom"
-import '../styles/landingpage/arrow.css'
 import '../styles/landingpage/textanimation.css'
 
 export default function LandingPage() {
@@ -26,8 +25,8 @@ export default function LandingPage() {
         <div className="">
             <section id='welcome-section' className='h-screen'>
                 {showWelcome && (
-                    <div className={`welcome-container bg-spring-100 m-0 p-0 flex justify-center items-center text-center ${fadeOut ? 'fade-out' : ''}`}>
-                        <h1 className="animated-welcome">Welcome To My Portfolio</h1>
+                    <div className={`welcome-container bg-spring-100 m-0 p-0 flex justify-center items-center text-center text-lg font-alfa${fadeOut ? 'fade-out' : ''}`}>
+                        <h1 className="animated-welcome">WELCOME TO MY PORTFOLIO</h1>
                     </div>
                 )}
                 <div className='h-[70vh] flex flex-row justify-around items-center'>

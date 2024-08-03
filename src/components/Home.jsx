@@ -3,7 +3,7 @@ import React from "react"
 export default function Home() {
     return (
         <div className="">
-            <div className="h-screen text-center content-center">
+            <div className="h-screen text-center content-center text-lg font-play">
                 <h1 className="p-6 ">
                     Turning Ideas into Interactive Experiences
                 </h1>

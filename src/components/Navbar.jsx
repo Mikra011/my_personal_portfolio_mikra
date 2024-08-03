@@ -15,14 +15,14 @@ export default function Navbar(props) {
 
   const toggleIsOpen = () => {
     setIsOpen(!isOpen);
-  };
+  }
 
   const menuItems = [
     { to: '/home', text: 'Home' },
     { to: '/about', text: 'About' },
     { to: '/projects', text: 'Projects' },
     { to: '/contacts', text: 'Contacts' },
-  ];
+  ]
 
   return (
     <nav className={isLandingPage
@@ -71,7 +71,7 @@ export default function Navbar(props) {
         {menuItems.map(item => (
           <li key={item.to}>
             <Link to={item.to} className="
-            m-1 block rounded-full py-1 text-sm 
+            m-1 block rounded-full py-1 text-sm font-play font-medium
             hover:text-spring-700 hover:bg-amethyst-100 
             focus:text-amethyst-500"
             >{item.text}</Link>
@@ -84,7 +84,7 @@ export default function Navbar(props) {
         {menuItems.map(item => (
           <li key={item.to}>
             <Link to={item.to} className="
-            m-1 block rounded-full p-2 text-sm 
+            m-1 block rounded-full p-2 text-sm font-play font-medium
             hover:text-spring-700 hover:bg-amethyst-100 
             focus:text-amethyst-500"
             >{item.text}</Link>

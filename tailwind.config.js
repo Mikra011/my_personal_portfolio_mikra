@@ -56,13 +56,21 @@ export default {
           900: '#06231D',
         },
       },
+      fontFamily: {
+        alex: ['Alex Brush', 'cursive'],
+        dancing: ['Dancing Script', 'cursive'],
+        alfa: ['Alfa Slab One', 'serif'],
+        play: ['Playfair Display', 'serif'],
+        kurale: ['Kurale', 'serif'],
+      },
       // more if needed
     },
-  },
-  // variants: {
-  //   extend: {
-  //     textColor: ['dark'],
-  //   },
-  // },
-  plugins: [],
+    
+    // variants: {
+    //   extend: {
+    //     textColor: ['dark'],
+    //   },
+    // },
+    plugins: [],
+  }
 }
