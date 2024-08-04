@@ -8,7 +8,7 @@ const About = () => {
     const [images, setImages] = useState([]);
 
     return (
-        <div>
+        <div id="about">
             <section className="h-screen">
                 <p>--------------------------------------------------------------</p>
             </section>

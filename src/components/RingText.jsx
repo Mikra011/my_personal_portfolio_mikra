@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/ringtext.css';
 
 
-const TextRing = ({ text }) => {
+const RingText = ({ text, btnText, href }) => {
     const [rotation, setRotation] = useState(0)
 
     useEffect(() => {
@@ -14,6 +14,7 @@ const TextRing = ({ text }) => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+
     return (
         <div className="text-ring-container">
             <div className="text-ring font-dancing font-bold">
@@ -21,16 +22,21 @@ const TextRing = ({ text }) => {
                     <span
                         key={index}
                         style={{
-                            transform: `rotate(${index * (360 / text.length)}deg) rotate(${rotation}deg)`
+                            transform: `
+                            rotate(${index * (360 / text.length)}deg) 
+                            rotate(${rotation}deg)
+                            `
                         }}
                     >
                         {char}
                     </span>
                 ))}
             </div>
-            <button className="center-button font-play font-medium">About Me</button>
+            <a href={href}>
+                <button className="center-button font-play font-medium">{btnText}</button>
+            </a>
         </div>
     )
 }
 
-export default TextRing
+export default RingText

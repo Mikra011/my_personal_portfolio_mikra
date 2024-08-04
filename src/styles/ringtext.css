@@ -1,8 +1,7 @@
-/* src/components/TextRing.css */
 .text-ring {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
