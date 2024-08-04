@@ -1,4 +1,5 @@
 import React from "react"
+import RingText from "./RingText"
 
 export default function Home() {
     return (
@@ -17,8 +18,10 @@ export default function Home() {
                         I&apos;m Robert, a passionate and dedicated aspiring <span className="font-alfa">Full Stack Developer</span>. I specialize in creating dynamic and responsive web applications using technologies like <span className="font-alfa">JavaScript, React and Node.js</span>. I&apos;m eager to bring my skills and enthusiasm to a forward-thinking development team.
                     </p>
                 </div>
-                <div className="p-6 border-2 border-amethyst-500">
-                    <button>show more</button>
+                <div className="p-6">
+                    <button>
+                        <RingText text="-SHOW MORE-SHOW MORE"/>
+                    </button>
                 </div>
             </section>
             <section className="h-screen">

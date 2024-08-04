@@ -1,0 +1,23 @@
+/* src/components/TextRing.css */
+.text-ring {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-ring span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 90px;
+    font-size: 20px;
+}
+
+.center-button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
