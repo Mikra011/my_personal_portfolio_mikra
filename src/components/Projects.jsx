@@ -2,8 +2,10 @@ import React from "react"
 
 export default function Projects() {
     return (
-        <div className="h-screen">
-            <h1>Here is the Projects page!</h1>
+        <div>
+            <section className="h-screen flex justify-center items-center text-center">
+                <h1>this is project page</h1>
+            </section>
         </div>
     )
 }

@@ -72,7 +72,8 @@ export default function Navbar(props) {
           <li key={item.to}>
             <Link to={item.to} className="
             m-1 block rounded-full py-1 text-sm font-play font-medium
-            hover:text-spring-700 hover:bg-amethyst-100 
+            border-2 border-transparent
+            hover:border-oasis-600 hover:border-2
             focus:text-amethyst-500"
             >{item.text}</Link>
           </li>
@@ -85,7 +86,8 @@ export default function Navbar(props) {
           <li key={item.to}>
             <Link to={item.to} className="
             m-1 block rounded-full p-2 text-sm font-play font-medium
-            hover:text-spring-700 hover:bg-amethyst-100 
+            border-2 border-transparent
+            hover:border-oasis-600 hover:border-2
             focus:text-amethyst-500"
             >{item.text}</Link>
           </li>

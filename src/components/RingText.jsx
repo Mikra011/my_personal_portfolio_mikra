@@ -33,7 +33,12 @@ const RingText = ({ text, btnText, href }) => {
                 ))}
             </div>
             <a href={href}>
-                <button className="center-button font-play font-medium">{btnText}</button>
+                <button className="
+                rounded-full p-2
+                center-button font-play font-medium 
+                border-2 border-transparent
+                hover:border-oasis-600 hover:border-2"
+                >{btnText}</button>
             </a>
         </div>
     )

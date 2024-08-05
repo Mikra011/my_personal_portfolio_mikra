@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import ImageGrid from "../components/ImageGrid"
 import ImageImporter from "../components/ImageImporter"
-import '../styles/about/parallaxpictures.css'
+import '../styles/parallaxpictures.css'
 
 const About = () => {
     const [images, setImages] = useState([]);
