@@ -24,7 +24,7 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="p-6">
-                        <RingText text="-SHOW MORE-SHOW MORE" btnText="About Me" href="about" />
+                        <RingText text="-SHOW MORE-SHOW MORE" btnText="About Me" href="about" font="font-dancing font-bold" />
                     </div>
                 </div>
 
@@ -46,6 +46,13 @@ export default function Home() {
                 <div className="size-32 border-2 border-scarlet-400 rounded-xl bg-spring-200 dark:bg-amethyst-800">
 
                 </div>
+                <div className="p-6">
+                    <RingText text="-SHOW MORE-SHOW MORE" btnText="Projects" href="projects" font="font-alex" />
+                </div>
+            </section>
+
+            <section className="h-screen">
+
             </section>
 
         </div>

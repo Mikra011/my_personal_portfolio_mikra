@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/ringtext.css';
 
 
-const RingText = ({ text, btnText, href }) => {
+const RingText = ({ text, btnText, href, font }) => {
     const [rotation, setRotation] = useState(0)
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const RingText = ({ text, btnText, href }) => {
 
     return (
         <div className="text-ring-container">
-            <div className="text-ring font-dancing font-bold">
+            <div className={`text-ring ${font}`}>
                 {text.split("").map((char, index) => (
                     <span
                         key={index}
