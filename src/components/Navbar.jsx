@@ -74,8 +74,8 @@ export default function Navbar(props) {
             m-1 block rounded-full py-1 text-sm font-play font-medium
             border-2 border-transparent
             hover:border-oasis-600 hover:border-2
-            focus:text-amethyst-500"
-            >{item.text}</Link>
+            focus:text-amethyst-500">
+              {item.text}</Link>
           </li>
         ))}
       </ul>
@@ -88,8 +88,8 @@ export default function Navbar(props) {
             m-1 block rounded-full p-2 text-sm font-play font-medium
             border-2 border-transparent
             hover:border-oasis-600 hover:border-2
-            focus:text-amethyst-500"
-            >{item.text}</Link>
+            focus:text-amethyst-500">
+              {item.text}</Link>
           </li>
         ))}
       </ul>

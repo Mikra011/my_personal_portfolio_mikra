@@ -12,7 +12,7 @@ const About = () => {
             <section className="h-screen">
                 <p>--------------------------------------------------------------</p>
             </section>
-            <section className="h-screen overflow-hidden">
+            <section className="h-vh-50 md:h-screen overflow-hidden">
                 <ImageImporter onImagesLoaded={setImages} />
                 <ImageGrid images={images} />
             </section>
