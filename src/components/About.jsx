@@ -3,8 +3,9 @@ import React, { useState } from "react"
 import ImageGrid from "../components/ImageGrid"
 import ImageImporter from "../components/ImageImporter"
 import '../styles/parallaxpictures.css'
+import CallToContact from "./CallToContact";
 
-const About = () => {
+export default function About() {
     const [images, setImages] = useState([]);
 
     return (
@@ -22,8 +23,10 @@ const About = () => {
             <section className="h-screen">
                 <p>--------------------------------------------------------------</p>
             </section>
-        </div>
-    );
-};
 
-export default About;
+            <CallToContact />
+
+        </div>
+    )
+}
+

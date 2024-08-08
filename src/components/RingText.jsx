@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/ringtext.css';
 
 
-const RingText = ({ text, btnText, href, font }) => {
+export default function RingText({ text, btnText, href, font }) {
     const [rotation, setRotation] = useState(0)
 
     useEffect(() => {
@@ -43,4 +43,3 @@ const RingText = ({ text, btnText, href, font }) => {
     )
 }
 
-export default RingText
