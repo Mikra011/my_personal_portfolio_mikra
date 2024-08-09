@@ -8,6 +8,7 @@ import Contacts from "./Contacts"
 import Navbar from './Navbar'
 import '../styles/index.css'
 import { useDarkMode } from './hooks/useDarkMode'
+import Footer from './Footer'
 
 export default function App() {
     const [darkMode, setDarkMode] = useDarkMode(false)
@@ -23,6 +24,7 @@ export default function App() {
                     <Route path='projects' element={<Projects />} />
                     <Route path='contacts' element={<Contacts />} />
                 </Routes>
+                <Footer />
             </div>
         </div>
     )

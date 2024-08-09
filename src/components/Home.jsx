@@ -6,8 +6,8 @@ export default function Home() {
     return (
         <div className="p-6">
             <section className="h-screen text-center content-center">
-                <h1 className="font-play text-4xl md:text-6xl">
-                    Turning Ideas into <span className="font-alfa">Interactive</span> Experiences
+                <h1 className="font-play font-bold text-2xl md:text-6xl">
+                    Turning Ideas into <span className="font-alfa text-4xl md:text-7xl">Interactive</span> Experiences
                 </h1>
                 <p className="font-kurale">
                     for your <span className="text-3xl">business</span>
@@ -40,7 +40,7 @@ export default function Home() {
             <section className="
             h-72 truncate mt-36 sm:mt-0 
             text-center content-center">
-                <div className="font-play text-4xl sm:text-7xl lg:text-9xl">
+                <div className="font-play font-bold text-4xl sm:text-7xl lg:text-9xl">
                     <span>My Portfolio</span>
                 </div>
             </section>
