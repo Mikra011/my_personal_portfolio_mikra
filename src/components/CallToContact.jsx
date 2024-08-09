@@ -40,14 +40,15 @@ export default function CallToContact() {
                 </div>
             </div>
             <div className="mt-24">
-                <button 
-                    onClick={handleContactClick}
-                    className="
+                <a href="contacts">
+                    <button
+                        className="
                         rounded-full p-2 bg-scarlet-400
                         hover:bg-oasis-600
                         font-play font-medium">
-                    Contact Me Here
-                </button>
+                        Contact Me Here
+                    </button>
+                </a>
             </div>
         </section>
     )
