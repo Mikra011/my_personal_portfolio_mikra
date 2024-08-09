@@ -1,10 +1,11 @@
 // Navbar.js
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import '../styles/index.css'
 
 export default function Navbar(props) {
   const location = useLocation()
+  const navigate = useNavigate()
   const isLandingPage = location.pathname === '/'
   const [isOpen, setIsOpen] = useState(false)
 
@@ -70,12 +71,12 @@ export default function Navbar(props) {
       <ul className={!isOpen ? 'hidden' : "md:block px-3 py-3  md:flex md:items-center md:space-x-6"}>
         {menuItems.map(item => (
           <li key={item.to}>
-            <Link to={item.to} className="
+            <button onClick={() => navigate(item.to)} className="
             m-1 block rounded-full py-1 text-sm font-play font-medium
             border-2 border-transparent
             hover:border-oasis-600 hover:border-2
             focus:text-amethyst-500">
-              {item.text}</Link>
+              {item.text}</button>
           </li>
         ))}
       </ul>
@@ -84,12 +85,12 @@ export default function Navbar(props) {
       <ul className="hidden md:block px-3 py-3  md:flex md:items-center md:space-x-2">
         {menuItems.map(item => (
           <li key={item.to}>
-            <Link to={item.to} className="
+            <button onClick={() => navigate(item.to)} className="
             m-1 block rounded-full p-2 text-sm font-play font-medium
             border-2 border-transparent
             hover:border-oasis-600 hover:border-2
             focus:text-amethyst-500">
-              {item.text}</Link>
+              {item.text}</button>
           </li>
         ))}
       </ul>
