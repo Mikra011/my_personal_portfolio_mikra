@@ -68,11 +68,12 @@ export default function Navbar(props) {
       </div>
 
       {/* Menu for small screens */}
-      <ul className={!isOpen ? 'hidden' : "md:block px-3 py-3  md:flex md:items-center md:space-x-6"}>
+      <ul className={!isOpen ? 'hidden' : "px-3 py-3 flex flex-col items-center justify-center min-h-[150px]"}>
         {menuItems.map(item => (
           <li key={item.to}>
             <button onClick={() => navigate(item.to)} className="
-            m-1 block rounded-full py-1 text-sm font-play font-medium
+            m-1 block rounded-full p-2 py-1 
+            text-sm font-play font-medium
             border-2 border-transparent
             hover:border-oasis-600 hover:border-2
             focus:text-amethyst-500">
