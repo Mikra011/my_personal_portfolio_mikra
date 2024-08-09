@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CallToContact() {
+    const navigate = useNavigate()
+
+    const handleContactClick = () => {
+        navigate("/contacts")
+    }
+
     return (
         <section className="h-screen flex flex-col items-center justify-center">
             <div className="flex flex-col items-center">
@@ -33,14 +40,14 @@ export default function CallToContact() {
                 </div>
             </div>
             <div className="mt-24">
-                <a href="contacts">
-                    <button className="
+                <button 
+                    onClick={handleContactClick}
+                    className="
                         rounded-full p-2 bg-scarlet-400
                         hover:bg-oasis-600
                         font-play font-medium">
-                        Contact Me Here
-                    </button>
-                </a>
+                    Contact Me Here
+                </button>
             </div>
         </section>
     )
