@@ -1,13 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 export default function CallToContact() {
-    const navigate = useNavigate()
-
-    const handleContactClick = () => {
-        navigate("/contacts")
-    }
-
     return (
         <section className="h-screen flex flex-col items-center justify-center">
             <div className="flex flex-col items-center">
