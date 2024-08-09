@@ -61,7 +61,7 @@ export default function Home() {
                     <RingText
                         text="-SHOW MORE-SHOW MORE"
                         btnText="Projects"
-                        href="projects"
+                        to="projects"
                         font="font-dancing" />
                 </div>
                 <div className="h-24">

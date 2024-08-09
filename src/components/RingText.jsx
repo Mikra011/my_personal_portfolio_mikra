@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import '../styles/ringtext.css';
 
-
-export default function RingText({ text, btnText, href, font }) {
+export default function RingText({ text, btnText, to, font }) { 
     const [rotation, setRotation] = useState(0)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,9 +15,12 @@ export default function RingText({ text, btnText, href, font }) {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    const handleClick = () => {
+        navigate(to)
+    }
 
     return (
-        <div className="text-ring-container">
+        <div className="text-ring-container text-center">
             <div className={`text-ring ${font}`}>
                 {text.split("").map((char, index) => (
                     <span
@@ -32,14 +36,14 @@ export default function RingText({ text, btnText, href, font }) {
                     </span>
                 ))}
             </div>
-            <a href={href}>
-                <button className="
+            <button
+                onClick={handleClick} // Handle button click
+                className="
                 rounded-full p-2 bg-scarlet-400
                 hover:bg-oasis-600
                 center-button font-play font-medium">
-                    {btnText}</button>
-            </a>
+                {btnText}
+            </button>
         </div>
-    )
+    );
 }
-
