@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div className="p-6">
             <section className="h-screen text-center content-center">
-                <h1 className="font-play">
+                <h1 className="font-play text-4xl md:text-6xl">
                     Turning Ideas into <span className="font-alfa">Interactive</span> Experiences
                 </h1>
                 <p className="font-kurale">
