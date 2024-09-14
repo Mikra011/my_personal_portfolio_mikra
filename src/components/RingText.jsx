@@ -34,9 +34,9 @@ export default function RingText({ text, btnText, href, font }) {
             <a href={href}>
                 <button
                     className="
-                rounded-full p-2 bg-scarlet-400
-                hover:bg-oasis-600
-                center-button font-play font-medium">
+                    rounded-full p-2 bg-scarlet-400
+                    hover:bg-oasis-600
+                    center-button font-play font-medium">
                     {btnText}
                 </button>
             </a>

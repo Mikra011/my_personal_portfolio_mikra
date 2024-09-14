@@ -45,7 +45,7 @@ export default function Contacts() {
                                     name="message"
                                     placeholder="Type your message here"
                                     required
-                                    className="p-2 shadow-md shadow-scarlet-400 hover:shadow-oasis-600 dark:text-amethyst-900 focus:outline-none focus:ring-2 focus:ring-amethyst-500"
+                                    className="p-2 shadow-lg shadow-scarlet-400 hover:shadow-oasis-600 dark:text-amethyst-900 focus:outline-none focus:ring-2 focus:ring-amethyst-500"
                                 />
                             </div>
                             <div>
