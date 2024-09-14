@@ -18,8 +18,6 @@
 .animated-welcome {
     position: relative;
     text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 0.5em;
     overflow: hidden;
     background: linear-gradient(90deg, #EEFCF9, #06231D, #EEFCF9);
     background-repeat: no-repeat;
