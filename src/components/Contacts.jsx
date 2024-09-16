@@ -48,7 +48,7 @@ export default function Contacts() {
                                     className="p-2 shadow-lg shadow-scarlet-400 hover:shadow-oasis-600 dark:text-amethyst-900 focus:outline-none focus:ring-2 focus:ring-amethyst-500"
                                 />
                             </div>
-                            <div>
+                            <div className="relative">
                                 <button type="submit" className="
                                 rounded-full p-2 px-4 mt-4 bg-scarlet-400
                                 hover:bg-oasis-600

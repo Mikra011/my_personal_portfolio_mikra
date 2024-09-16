@@ -1,19 +1,27 @@
-import React from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import LandingPage from './Landingpage'
-import Home from './Home'
-import About from "./About"
-import Projects from "./Projects"
-import Contacts from "./Contacts"
-import Navbar from './Navbar'
-import '../styles/index.css'
-import { useDarkMode } from './hooks/useDarkMode'
-import Footer from './Footer'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import LandingPage from './Landingpage';
+import Home from './Home';
+import About from "./About";
+import Projects from "./Projects";
+import Contacts from "./Contacts";
+import Navbar from './Navbar';
+import '../styles/index.css';
+import { useDarkMode } from './hooks/useDarkMode';
+import Footer from './Footer';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 export default function App() {
     const [darkMode, setDarkMode] = useDarkMode(false)
     const location = useLocation()
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            window.scrollTo(0, 0)
+        }, 750)
+
+        return () => clearTimeout(timer)
+    }, [location])
 
     return (
         <div className={darkMode ? "dark" : ""}>
@@ -22,8 +30,8 @@ export default function App() {
                 <TransitionGroup>
                     <CSSTransition
                         key={location.key}
-                        classNames="fade"
-                        timeout={2000}
+                        classNames="tile"
+                        timeout={1500} // Adjust timeout to match animation duration
                     >
                         <div className="page-container">
                             <Routes location={location}>
@@ -36,9 +44,8 @@ export default function App() {
                         </div>
                     </CSSTransition>
                 </TransitionGroup>
+                <Footer />
             </div>
         </div>
     )
 }
-
-

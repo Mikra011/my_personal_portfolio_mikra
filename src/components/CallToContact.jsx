@@ -1,8 +1,16 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function CallToContact() {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/contacts');
+    };
+
+
     return (
-        <section className="h-screen flex flex-col items-center justify-center">
+        <section className="h-screen flex flex-col items-center justify-center pt-16">
             <div className="flex flex-col items-center">
                 <div className="flex flex-row items-start ">
                     <div className="
@@ -32,16 +40,15 @@ export default function CallToContact() {
                     </span>
                 </div>
             </div>
-            <div className="mt-24">
-                <a href="contacts">
-                    <button
-                        className="
+            <div className="mt-24 relative">
+                <button
+                    onClick={handleClick}
+                    className="
                         rounded-full p-2 bg-scarlet-400
-                        hover:bg-oasis-600
+                        hover:bg-oasis-600 
                         font-play font-medium">
-                        Contact Me Here
-                    </button>
-                </a>
+                    Contact Me Here
+                </button>
             </div>
         </section>
     )

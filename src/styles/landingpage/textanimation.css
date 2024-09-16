@@ -19,9 +19,9 @@
     position: relative;
     text-transform: uppercase;
     overflow: hidden;
-    background: linear-gradient(90deg, #EEFCF9, #06231D, #EEFCF9);
+    background: linear-gradient(180deg, #EEFCF9, #06231D, #EEFCF9); /* Changed to vertical gradient */
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: 100% 70%; /* Changed to vertical size */
     animation: animate 4.5s linear 1, fadeOut 0.5s linear 1 forwards;
     animation-delay: 0s, 4s;
     background-clip: text;
@@ -35,11 +35,11 @@
 
 @keyframes animate {
     0% {
-        background-position: -500%;
+        background-position: 0% -500%;
     }
 
     100% {
-        background-position: 500%;
+        background-position: 0% 500%;
     }
 }
 
@@ -51,4 +51,3 @@
         opacity: 0; /* End with transparent text */
     }
 }
-

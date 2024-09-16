@@ -4,6 +4,7 @@ import '../styles/ringtext.css';
 
 export default function RingText({ text, btnText, href, font }) {
     const [rotation, setRotation] = useState(0)
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,6 +14,10 @@ export default function RingText({ text, btnText, href, font }) {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
+    const handleClick = () => {
+        navigate(`/${href}`);
+    };
 
     return (
         <div className="text-ring-container text-center">
@@ -31,15 +36,16 @@ export default function RingText({ text, btnText, href, font }) {
                     </span>
                 ))}
             </div>
-            <a href={href}>
+            <div>
                 <button
+                    onClick={handleClick}
                     className="
                     rounded-full p-2 bg-scarlet-400
                     hover:bg-oasis-600
                     center-button font-play font-medium">
                     {btnText}
                 </button>
-            </a>
+            </div>
         </div>
     );
 }
