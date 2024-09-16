@@ -1,0 +1,24 @@
+/* Custom styles for the interactive span */
+@function grid($grid-size) {
+  @return calc(100vw / 24 * #{$grid-size});
+}
+
+.interactive-text {
+  --x-translate: 0;
+  --y-translate: 0;
+  font-size: grid(3);
+  
+  /* Properly update the matrix3d transform */
+  transform: matrix3d(
+    1, 0, 0, calc(var(--x-translate) / 1000000),
+    0, 1, 0, calc(var(--y-translate) / 1000000),
+    0, 0, 1, 0,
+    0, 0, 0, 1
+  );
+  
+  font-variation-settings: 'wght' 700;
+  text-shadow:
+    calc(grid(10/60)) 10px 2px rgba(0, 0, 0, 0.1),
+    calc(grid(10/60)) calc(grid(10/60)) 10px rgba(0, 0, 0, 0.2),
+    calc(-1 * grid(10/60)) calc(-1 * grid(10/60)) 10px rgba(255, 255, 255, 0.7);
+}

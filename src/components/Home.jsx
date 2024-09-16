@@ -1,6 +1,7 @@
 import React from "react"
 import RingText from "./RingText"
 import CallToContact from "./CallToContact"
+import InteractiveText from "./InteractiveText"
 
 export default function Home() {
     return (
@@ -18,18 +19,14 @@ export default function Home() {
                                 Ideas
                             </span>
                         </div>
-                        <div className="flex flex-col pt-6 font-dancing ">
+                        <div className="flex flex-col pt-6 font-alex ">
                             <p className="text-4xl md:text-6xl lg:text-8xl">
                                 into
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-col items-center">
-                        <span className="
-                        text-5xl md:text-7xl lg:text-9xl
-                        font-bold mb-2 font-alfa">
-                            Interactive
-                        </span>
+                        <InteractiveText />
                         <span className="font-play text-4xl md:text-6xl lg:text-8xl mb-2">
                             Experineces
                         </span>
