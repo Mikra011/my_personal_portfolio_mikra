@@ -25,15 +25,12 @@ export default function LandingPage() {
                 {showWelcome && (
                     <div className={`welcome-container bg-spring-100 m-0 p-4 flex justify-center items-center text-center text-4xl md:text-6xl lg:text-8xl font-alfa${fadeOut ? 'fade-out' : ''}`}>
                         <h1 className="animated-welcome ">
-                            <div className='flex flex-col' > 
+                            <div className='flex flex-col' >
                                 <span>
-                                    WELCOME
+                                    ROBERT&apos;S
                                 </span>
                                 <span>
-                                    TO
-                                </span>
-                                <span>
-                                    MY PORTFOLIO
+                                    PORTFOLIO
                                 </span>
                             </div>
 
