@@ -47,7 +47,10 @@ export default function Home() {
                 gap-x-10 items-center">
                     <div className="w-60 md:w-96" >
 
-                        <AnimatedInView threshold={0.4}>
+                        <AnimatedInView
+                            baseClass="animated-left"
+                            animationClass="animate-l"
+                            threshold={0.2}>
                             <p
                                 className="
                             p-6 text-base md:text-xl text-left font-kurale
@@ -57,7 +60,10 @@ export default function Home() {
                         </AnimatedInView>
 
                     </div>
-                    <AnimatedInView threshold={0.9}>
+                    <AnimatedInView
+                        baseClass="animated-right"
+                        animationClass="animate-r"
+                        threshold={0.9}>
                         <div className="p-6">
                             <RingText
                                 text="-SHOW MORE-SHOW MORE"
@@ -90,15 +96,20 @@ export default function Home() {
                 <div className="size-32 border-2 border-scarlet-400 rounded-xl bg-spring-200 dark:bg-amethyst-800">
 
                 </div>
-                <div
-                    className="p-6"
-                >
-                    <RingText
-                        text="-SHOW MORE-SHOW MORE"
-                        btnText="Projects"
-                        href="projects"
-                        font="font-dancing" />
-                </div>
+
+                <AnimatedInView
+                    baseClass="animated-grow"
+                    animationClass="animate-g"
+                    threshold={0.9}>
+                    <div className="p-6">
+                        <RingText
+                            text="-SHOW MORE-SHOW MORE"
+                            btnText="Projects"
+                            href="projects"
+                            font="font-dancing" />
+                    </div>
+                </AnimatedInView>
+
                 <div className="h-24">
 
                 </div>
