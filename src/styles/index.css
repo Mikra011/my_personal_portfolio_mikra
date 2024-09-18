@@ -40,25 +40,3 @@
         transform: translateX(100%);
     }
 }
-
-/* Effect to bring in items */
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(150px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    opacity: 0;
-}
-
-.fade-in-visible {
-    animation: fadeInUp 0.3s ease-out forwards;
-}

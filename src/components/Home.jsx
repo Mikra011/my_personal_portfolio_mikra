@@ -1,11 +1,10 @@
-import React, { useContext } from "react"
+import React from "react"
 import RingText from "./RingText"
 import CallToContact from "./CallToContact"
 import InteractiveText from "./InteractiveText"
-import IntersectionContext from './context/IntersectionContext';
+import AnimatedInView from "./AnimatedInView"
 
 export default function Home() {
-    const { sectionsRef } = useContext(IntersectionContext);
 
     return (
         <div className="p-6">
@@ -47,21 +46,27 @@ export default function Home() {
                 flex-column sm:flex justify-between 
                 gap-x-10 items-center">
                     <div className="w-60 md:w-96" >
-                        <p
-                            className="
-                            p-6 text-base md:text-xl text-left font-kurale fade-in
-                            rounded-xl bg-spring-200 dark:bg-amethyst-800"
-                            ref={(el) => (sectionsRef.current[0] = el)}>
-                            I&apos;m Robert, a passionate and dedicated aspiring <span className="font-alfa">Full Stack Developer</span>. I specialize in creating dynamic and responsive web applications using technologies like <span className="font-alfa">JavaScript, React and Node.js</span>. I&apos;m eager to bring my skills and enthusiasm to a forward-thinking development team.
-                        </p>
+
+                        <AnimatedInView threshold={0.4}>
+                            <p
+                                className="
+                            p-6 text-base md:text-xl text-left font-kurale
+                            rounded-xl bg-spring-200 dark:bg-amethyst-800">
+                                I&apos;m Robert, a passionate and dedicated aspiring <span className="font-alfa">Full Stack Developer</span>. I specialize in creating dynamic and responsive web applications using technologies like <span className="font-alfa">JavaScript, React and Node.js</span>. I&apos;m eager to bring my skills and enthusiasm to a forward-thinking development team.
+                            </p>
+                        </AnimatedInView>
+
                     </div>
-                    <div className="p-6">
-                        <RingText
-                            text="-SHOW MORE-SHOW MORE"
-                            btnText="About Me"
-                            href="about"
-                            font="font-dancing" />
-                    </div>
+                    <AnimatedInView threshold={0.9}>
+                        <div className="p-6">
+                            <RingText
+                                text="-SHOW MORE-SHOW MORE"
+                                btnText="About Me"
+                                href="about"
+                                font="font-dancing" />
+                        </div>
+                    </AnimatedInView>
+
                 </div>
             </section>
 
@@ -85,8 +90,8 @@ export default function Home() {
                 <div className="size-32 border-2 border-scarlet-400 rounded-xl bg-spring-200 dark:bg-amethyst-800">
 
                 </div>
-                <div 
-                className="p-6"
+                <div
+                    className="p-6"
                 >
                     <RingText
                         text="-SHOW MORE-SHOW MORE"
