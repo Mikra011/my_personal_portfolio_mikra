@@ -1,9 +1,15 @@
 import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
+    const location = useLocation()
+    const isLandingPage = location.pathname === '/'
+
     return (
-        <footer className="bottom-0 z-50 w-full flex flex-row justify-between p-2">
+        <footer className={isLandingPage
+            ? 'hidden'
+            : 'bottom-0 fixed z-50 w-full flex flex-row justify-between p-2'}>
             <div>
                 <FontAwesomeIcon className='fa-2x md:fa-3x p-1 transition-transform duration-200 hover:scale-125' icon={faSquareGithub} />
                 <FontAwesomeIcon className='fa-2x md:fa-3x p-1 transition-transform duration-200 hover:scale-125' icon={faLinkedin} />

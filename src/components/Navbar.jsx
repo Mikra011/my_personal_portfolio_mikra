@@ -28,7 +28,7 @@ export default function Navbar(props) {
   return (
     <nav className={isLandingPage
       ? 'hidden'
-      : 'bg-spring-100 dark:bg-amethyst-900 fixed top-0 w-full z-50 md:flex md:justify-between md:items-center'}>
+      : 'fixed top-0 w-full z-50 md:flex md:justify-between md:items-center'}>
       <div className='px-3 py-3 flex justify-between items-center'>
         {/* <section>
           <h1
@@ -76,7 +76,9 @@ export default function Navbar(props) {
             text-sm font-play font-medium
             border-2 border-transparent
             hover:border-oasis-600 hover:border-2
-            focus:text-amethyst-500">
+            focus:text-amethyst-500
+            bg-spring-100 dark:bg-amethyst-900
+            w-[200px] h-[50px]">
               {item.text}</button>
           </li>
         ))}
@@ -88,7 +90,7 @@ export default function Navbar(props) {
           <li key={item.to}>
             <button onClick={() => navigate(item.to)} className="
             m-1 block rounded-full p-2 text-sm font-play font-medium
-            border-2 border-transparent
+            border-2 border-transparent bg-spring-100 dark:bg-amethyst-900
             hover:border-oasis-600 hover:border-2
             focus:text-amethyst-500">
               {item.text}</button>

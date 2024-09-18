@@ -35,7 +35,7 @@ export default function CallToContact() {
                         font-bold mb-4 font-alfa">
                         MEANINGFUL
                     </span>
-                    <span className="text-xl md:text-3xl lg:text-7xl font-semibold">
+                    <span className="text-xl md:text-3xl lg:text-7xl font-semibold font-play">
                         TOGETHER
                     </span>
                 </div>
