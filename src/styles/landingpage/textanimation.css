@@ -19,9 +19,9 @@
     position: relative;
     text-transform: uppercase;
     overflow: hidden;
-    background: linear-gradient(180deg, #EEFCF9, #06231D, #EEFCF9); /* Changed to vertical gradient */
+    background: linear-gradient(180deg, #EEFCF9, #06231D, #EEFCF9); 
     background-repeat: no-repeat;
-    background-size: 100% 70%; /* Changed to vertical size */
+    background-size: 100% 70%; 
     animation: animate 4.5s linear 1, fadeOut 0.5s linear 1 forwards;
     animation-delay: 0s, 4s;
     background-clip: text;

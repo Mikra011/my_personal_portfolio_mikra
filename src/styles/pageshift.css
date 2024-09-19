@@ -1,0 +1,56 @@
+.page-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.page-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.page-overlay-l {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90; /* Ensures the overlay is above the content */
+    transform: translateX(-100%); /* Start position off-screen */
+    transition: transform 0.5s ease; /* Apply transition */
+}
+
+.tile-enter .page-overlay-l,
+.tile-exit-active .page-overlay-l {
+    transform: translateX(-100%); /* Start position for enter animation + End position for exit animation */
+}
+
+.tile-enter-active .page-overlay-l,
+.tile-exit .page-overlay-l {
+    transform: translateX(-40%); /* End position for enter animation + Start position for exit animation */
+}
+
+.page-overlay-r {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90; /* Ensures the overlay is above the content */
+    transform: translateX(100%); /* Start position off-screen */
+    transition: transform 0.5s ease; /* Apply transition */
+}
+
+.tile-enter .page-overlay-r,
+.tile-exit-active .page-overlay-r {
+    transform: translateX(100%); /* Start position for enter animation + End position for exit animation */
+}
+
+.tile-enter-active .page-overlay-r,
+.tile-exit .page-overlay-r {
+    transform: translateX(40%); /* End position for enter animation + Start position for exit animation */
+}
+
+

@@ -18,15 +18,15 @@ export default function Footer() {
                     <FontAwesomeIcon className='fa-2x md:fa-3x p-1 transition-transform duration-200 hover:scale-125' icon={faLinkedin} />
                 </div>
             </div>
-            {/* <p className='font-kurale text-sm md:text-lg'>Robert Toth-Ludanyi 2024</p> */}
+            
             <a
                 href="#"
                 onClick={e => e.preventDefault()}
                 className='
-            text-md font-play font-medium text-center border-2 p-2
-            rounded-full border-transparent
-            hover:border-oasis-600 hover:border-2
-            bg-spring-100 dark:bg-amethyst-900'>
+                    text-md font-play font-medium text-center border-2 p-2
+                    rounded-full border-transparent
+                    hover:border-oasis-600 hover:border-2
+                    bg-spring-100 dark:bg-amethyst-900'>
                 Resume
             </a>
         </footer>
