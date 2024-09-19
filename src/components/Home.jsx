@@ -63,7 +63,7 @@ export default function Home() {
                     <AnimatedInView
                         baseClass="animated-right"
                         animationClass="animate-r"
-                        threshold={0.9}>
+                        threshold={0.2}>
                         <div className="p-6">
                             <RingText
                                 text="-SHOW MORE-SHOW MORE"
@@ -100,7 +100,7 @@ export default function Home() {
                 <AnimatedInView
                     baseClass="animated-grow"
                     animationClass="animate-g"
-                    threshold={0.9}>
+                    threshold={0.2}>
                     <div className="p-6">
                         <RingText
                             text="-SHOW MORE-SHOW MORE"

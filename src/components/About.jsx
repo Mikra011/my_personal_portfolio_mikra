@@ -4,6 +4,7 @@ import ImageGrid from "../components/ImageGrid"
 import ImageImporter from "../components/ImageImporter"
 import '../styles/parallaxpictures.css'
 import CallToContact from "./CallToContact";
+import Skills from "./Skills";
 
 export default function About() {
     const [images, setImages] = useState([]);
@@ -39,7 +40,9 @@ export default function About() {
                     </div>
 
                     <div
-                        className="text-4xl md:text-7xl lg:text-9xl font-thin mb-4 font-play tracking-widest mr-16 md:mr-32"
+                        className="
+                        text-4xl md:text-7xl lg:text-9xl font-thin 
+                        mb-4 font-play tracking-widest mr-16 md:mr-32"
                         data-speed="-0.1">
                         <span>Consistently</span>
                     </div>
@@ -48,30 +51,40 @@ export default function About() {
                         className="flex flex-row items-center"
                         data-speed="0.15">
                         <div className="flex flex-col font-dancing">
-                            <span className="text-3xl md:text-6xl lg:text-6xl ml-8 md:ml-40 lg:ml-96">pushing boundaries</span>
+                            <span
+                                className="
+                            text-3xl md:text-6xl lg:text-6xl 
+                            ml-8 md:ml-40 lg:ml-96">
+                                pushing boundaries</span>
                         </div>
                     </div>
 
                     <div
-                        className="flex flex-col items-center font-alex text-sm md:text-xl lg:text-4xl mr-32 lg:mr-4"
+                        className="
+                        flex flex-col items-center font-alex text-sm 
+                        md:text-xl lg:text-4xl mr-32 lg:mr-4"
                         data-speed="0.25">
                         <span>and</span>
                     </div>
 
                     <div className="flex flex-col items-center">
                         <span
-                            className="text-3xl md:text-7xl lg:text-9xl font-semibold mb-4 font-play mr-24 md:mr-40"
+                            className="
+                            text-3xl md:text-7xl lg:text-9xl font-semibold 
+                            mb-4 font-play mr-24 md:mr-40"
                             data-speed="-0.15">
                             embracing
                         </span>
                         <div className="flex flex-row items-center ml-8 md:ml-40">
                             <span
-                                className="font-dancing text-sm md:text-xl lg:text-4xl mr-4 mt-2 md:mt-4 lg:mt-8"
+                                className="font-dancing text-sm md:text-xl 
+                                lg:text-4xl mr-4 mt-2 md:mt-4 lg:mt-8"
                                 data-speed="0.1">
                                 new
                             </span>
                             <span
-                                className="font-play text-lg md:text-3xl lg:text-7xl font-semibold"
+                                className="font-play text-lg md:text-3xl 
+                                lg:text-7xl font-semibold"
                                 data-speed="0.1">
                                 challenges.
                             </span>
@@ -80,15 +93,18 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="h-screen p-4 md:p-20 flex flex-col lg:flex-row space-y-8 lg:space-x-16 justify-center items-center">
+            <section
+                className="
+                h-screen p-4 md:p-20 flex flex-col lg:flex-row 
+                space-y-8 lg:space-x-16 justify-center items-center">
                 <div>
                     <div className="border w-[200px] md:w-[400px] h-[200px] md:h-[400px]"></div>
                 </div>
                 <div
                     className="
-                p-4 m-4 w-[300px] md:w-[600px] font-kurale 
-                text-xs md:text-sm lg:text-base rounded-xl 
-                bg-spring-200 dark:bg-amethyst-800">
+                    p-4 m-4 w-[300px] md:w-[600px] font-kurale 
+                    text-xs md:text-sm lg:text-base rounded-xl 
+                    bg-spring-200 dark:bg-amethyst-800">
                     <p className="mb-4">
                         Hello! It&apos;s a pleasure to introduce myself.
                     </p>
@@ -109,21 +125,84 @@ export default function About() {
 
             </section>
 
-            <section className="h-screen p-4 pt-12" >
+            <section className="h-screen flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center mr-48 md:mr-24 lg:mr-48">
+                    <div
+                        className="
+                        flex flex-col items-center font-alex text-lg 
+                        md:text-2xl lg:text-6xl ml-96 md:ml-32 lg:mr-32"
+                        data-speed="-0.1">
+                        <span>I am a</span>
+                    </div>
 
+                    <div
+                        className="flex flex-row items-center"
+                        data-speed="0.15">
+                        <div className="flex flex-col font-play">
+                            <span
+                                className="
+                                text-3xl md:text-6xl lg:text-8xl font-thin 
+                                mb-4 font-play tracking-widest mr-48 md:mr-32">
+                                curious
+                                <span className="text-2xl md:text-5xl lg:text-6xl font-dancing"> soul,</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        className="
+                        text-3xl md:text-6xl lg:text-8xl font-thin 
+                        mb-4 font-play tracking-widest mr-96 md:mr-64"
+                        data-speed="0.25">
+                        <span>learning </span>
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                        <span
+                            className="
+                            text-3xl md:text-7xl lg:text-9xl font-semibold 
+                            mb-4 font-play ml-[500px] md:ml-[750px] lg:mr-40 min-w-[170px] md:min-w-[700px]"
+                            data-speed="-0.15">
+                            <span
+                                className="
+                                font-dancing text-sm md:text-xl
+                                lg:text-4xl mr-4 mt-2 md:mt-4 lg:mt-8">
+                                and
+                            </span> growing
+                        </span>
+                        <div className="flex flex-row items-center md:mr-8 lg:ml-96">
+                            <span
+                                className="font-play text-lg md:text-3xl lg:text-7xl font-semibold mr-1"
+                                data-speed="0.1">
+                                every
+                            </span>
+                            <span
+                                className="font-dancing text-sm md:text-xl lg:text-4xl mr-4 mt-2 lg:mt-8"
+                                data-speed="0.1">
+                                day.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="p-4 pt-12" >
+                <Skills />
+            </section>
+
+            <section className="p-4 h-screen flex flex-col justify-center items-center">
+                <h1 className="p-4 font-play text-2xl font-semibold">On a personal note:</h1>
+                <p className="p-4 font-kurale text-md"> 
+                    I&apos;m a proud father of a little girl, and our family includes a &apos;really good boy&apos; (our dog!). Outside of coding, I love to make music, woodworking, hiking, and traveling, although most of my free time lately has been dedicated to coding and development.
+                </p>
             </section>
 
             <section className="h-vh-50 md:h-screen ">
                 <ImageImporter onImagesLoaded={setImages} />
                 <ImageGrid images={images} />
             </section>
-            <section className="h-screen">
-                <p>--------------------------------------------------------------</p>
-            </section>
-            <section className="h-screen">
-                <p>
-                    On a personal note, I&apos;m a proud father of a little girl, and our family includes a &apos;really good boy&apos; (our dog!). Outside of coding, I love to make music, woodworking, hiking, and traveling, although most of my free time lately has been dedicated to coding and development.
-                </p>
+
+            <section className="h-screen pt-12">
                 <p>
                     I&apos;m excited to join a collaborative team where I can continue learning, take on challenges, and benefit from the guidance of experienced professionals.
                     I thrive in environments that value best practices, and I&apos;m eager to contribute to impactful projects.

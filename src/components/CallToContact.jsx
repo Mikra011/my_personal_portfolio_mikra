@@ -46,7 +46,7 @@ export default function CallToContact() {
             <AnimatedInView
                 baseClass="animated-drop-grow"
                 animationClass="animate-dg"
-                threshold={0.9}>
+                threshold={0.2}>
                 <div className="mt-24 relative">
                     <button
                         onClick={handleClick}
