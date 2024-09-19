@@ -13,40 +13,35 @@ export default function CallToContact() {
     return (
         <section className="h-screen flex flex-col items-center justify-center pt-16">
 
-            <AnimatedInView
-            baseClass="animated-window"
-            animationClass="animate-w"
-            threshold={0.9}>
-                <div className="flex flex-col items-center">
-                    <div className="flex flex-row items-start ">
-                        <div className="
+            <div className="flex flex-col items-center">
+                <div className="flex flex-row items-start ">
+                    <div className="
                         flex flex-col items-center mr-4 mt-6 lg:mt-10 
                         font-alex text-lg md:text-2xl lg:text-4xl">
-                            <span>
-                                Let&apos;s
-                            </span>
-                            <span>
-                                create
-                            </span>
-                        </div>
-                        <div className="flex flex-col pt-6 font-dancing ">
-                            <p className="text-4xl md:text-6xl lg:text-8xl">
-                                Something
-                            </p>
-                        </div>
+                        <span>
+                            Let&apos;s
+                        </span>
+                        <span>
+                            create
+                        </span>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <span className="
-                        text-3xl md:text-7xl lg:text-9xl
-                        font-bold mb-4 font-alfa">
-                            MEANINGFUL
-                        </span>
-                        <span className="text-xl md:text-3xl lg:text-7xl font-semibold font-play">
-                            TOGETHER
-                        </span>
+                    <div className="flex flex-col pt-6 font-dancing ">
+                        <p className="text-4xl md:text-6xl lg:text-8xl">
+                            Something
+                        </p>
                     </div>
                 </div>
-            </AnimatedInView>
+                <div className="flex flex-col items-center">
+                    <span className="
+                        text-3xl md:text-7xl lg:text-9xl
+                        font-bold mb-4 font-alfa">
+                        MEANINGFUL
+                    </span>
+                    <span className="text-xl md:text-3xl lg:text-7xl font-semibold font-play">
+                        TOGETHER
+                    </span>
+                </div>
+            </div>
 
             <AnimatedInView
                 baseClass="animated-drop-grow"

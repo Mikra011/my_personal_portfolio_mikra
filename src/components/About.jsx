@@ -39,7 +39,7 @@ export default function About() {
                     </div>
 
                     <div
-                        className="text-3xl md:text-7xl lg:text-9xl font-thin mb-4 font-play tracking-widest mr-16 md:mr-32"
+                        className="text-4xl md:text-7xl lg:text-9xl font-thin mb-4 font-play tracking-widest mr-16 md:mr-32"
                         data-speed="-0.1">
                         <span>Consistently</span>
                     </div>
@@ -48,7 +48,7 @@ export default function About() {
                         className="flex flex-row items-center"
                         data-speed="0.15">
                         <div className="flex flex-col font-dancing">
-                            <span className="text-2xl md:text-6xl lg:text-6xl ml-8 md:ml-40 lg:ml-96">pushing boundaries</span>
+                            <span className="text-3xl md:text-6xl lg:text-6xl ml-8 md:ml-40 lg:ml-96">pushing boundaries</span>
                         </div>
                     </div>
 
@@ -60,7 +60,7 @@ export default function About() {
 
                     <div className="flex flex-col items-center">
                         <span
-                            className="text-2xl md:text-7xl lg:text-9xl font-semibold mb-4 font-play mr-24 md:mr-40"
+                            className="text-3xl md:text-7xl lg:text-9xl font-semibold mb-4 font-play mr-24 md:mr-40"
                             data-speed="-0.15">
                             embracing
                         </span>
@@ -71,7 +71,7 @@ export default function About() {
                                 new
                             </span>
                             <span
-                                className="font-play text-md md:text-3xl lg:text-7xl font-semibold"
+                                className="font-play text-lg md:text-3xl lg:text-7xl font-semibold"
                                 data-speed="0.1">
                                 challenges.
                             </span>
@@ -84,7 +84,11 @@ export default function About() {
                 <div>
                     <div className="border w-[200px] md:w-[400px] h-[200px] md:h-[400px]"></div>
                 </div>
-                <div className="m-4 w-[300px] md:w-[600px] font-kurale text-xs md:text-sm lg:text-base border">
+                <div
+                    className="
+                p-4 m-4 w-[300px] md:w-[600px] font-kurale 
+                text-xs md:text-sm lg:text-base rounded-xl 
+                bg-spring-200 dark:bg-amethyst-800">
                     <p className="mb-4">
                         Hello! It&apos;s a pleasure to introduce myself.
                     </p>
@@ -105,15 +109,8 @@ export default function About() {
 
             </section>
 
-            <section className="h-screen p-12 ">
-                <p>
-                    On a personal note, I&apos;m a proud father of a little girl, and our family includes a &apos;really good boy&apos; (our dog!). Outside of coding, I love to make music, woodworking, hiking, and traveling, although most of my free time lately has been dedicated to coding and development.
-                </p>
-                <p>
-                    I&apos;m excited to join a collaborative team where I can continue learning, take on challenges, and benefit from the guidance of experienced professionals.
-                    I thrive in environments that value best practices, and I&apos;m eager to contribute to impactful projects.
-                    Feel free to explore my work and reach out—I&apos;d love to connect and discuss how I can contribute to your team!
-                </p>
+            <section className="h-screen p-4 pt-12" >
+
             </section>
 
             <section className="h-vh-50 md:h-screen ">
@@ -124,7 +121,14 @@ export default function About() {
                 <p>--------------------------------------------------------------</p>
             </section>
             <section className="h-screen">
-                <p>--------------------------------------------------------------</p>
+                <p>
+                    On a personal note, I&apos;m a proud father of a little girl, and our family includes a &apos;really good boy&apos; (our dog!). Outside of coding, I love to make music, woodworking, hiking, and traveling, although most of my free time lately has been dedicated to coding and development.
+                </p>
+                <p>
+                    I&apos;m excited to join a collaborative team where I can continue learning, take on challenges, and benefit from the guidance of experienced professionals.
+                    I thrive in environments that value best practices, and I&apos;m eager to contribute to impactful projects.
+                    Feel free to explore my work and reach out—I&apos;d love to connect and discuss how I can contribute to your team!
+                </p>
             </section>
 
             <CallToContact />

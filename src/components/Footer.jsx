@@ -10,9 +10,13 @@ export default function Footer() {
         <footer className={isLandingPage
             ? 'hidden'
             : 'bottom-0 fixed z-50 w-full flex flex-row justify-between p-2'}>
-            <div>
-                <FontAwesomeIcon className='fa-2x md:fa-3x p-1 transition-transform duration-200 hover:scale-125' icon={faSquareGithub} />
-                <FontAwesomeIcon className='fa-2x md:fa-3x p-1 transition-transform duration-200 hover:scale-125' icon={faLinkedin} />
+            <div className='flex flex-row space-x-1'>
+                <div className='rounded-full p-1 bg-spring-100 dark:bg-amethyst-900'>
+                    <FontAwesomeIcon className='fa-2x md:fa-3x p-1 transition-transform duration-200 hover:scale-125' icon={faSquareGithub} />
+                </div>
+                <div className='rounded-full p-1 bg-spring-100 dark:bg-amethyst-900'>
+                    <FontAwesomeIcon className='fa-2x md:fa-3x p-1 transition-transform duration-200 hover:scale-125' icon={faLinkedin} />
+                </div>
             </div>
             {/* <p className='font-kurale text-sm md:text-lg'>Robert Toth-Ludanyi 2024</p> */}
             <a
@@ -21,7 +25,8 @@ export default function Footer() {
                 className='
             text-md font-play font-medium text-center border-2 p-2
             rounded-full border-transparent
-            hover:border-oasis-600 hover:border-2'>
+            hover:border-oasis-600 hover:border-2
+            bg-spring-100 dark:bg-amethyst-900'>
                 Resume
             </a>
         </footer>
