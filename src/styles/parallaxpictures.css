@@ -20,7 +20,7 @@
 }
 
 .row:not( :nth-of-type(2)) {
-    animation: scale 1s linear both;
+    animation: scale 0.2s linear both;
     animation-timeline: scroll(root);
 }
 
