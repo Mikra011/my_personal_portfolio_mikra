@@ -11,7 +11,7 @@ export default function Contacts() {
                         </p>
                     </div>
                     <div className="flex flex-col w-5/6 md:full lg:w-2/3 xl:w-3/5 text-left">
-                        <form action="https://formsubmit.co/roberttothmails@yahoo.com" method="POST">
+                        <form action="https://formsubmit.co/e2d8d9b38ef71ec97d9ad027740160a0" method="POST">
                             <div className="flex flex-col py-2">
                                 <label htmlFor="name" className="font-kurale">
                                     Name
