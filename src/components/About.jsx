@@ -117,7 +117,7 @@ export default function About() {
                     className="
                     p-4 m-4 w-[300px] md:w-[600px] lg:w-[750px] font-kurale 
                     text-sm md:text-md lg:text-lg rounded-xl 
-                    bg-spring-200 dark:bg-amethyst-800">
+                    bg-spring-200 dark:bg-amethyst-800 text-justify">
                     <p className="mb-4">
                         Hello! It&apos;s a pleasure to introduce myself.
                     </p>
@@ -225,7 +225,7 @@ export default function About() {
                     <p
                         className="
                         p-4 font-kurale text-md lg:text-xl w-[300px] lg:w-[400px]
-                        rounded-xl bg-spring-200 dark:bg-amethyst-800">
+                        rounded-xl bg-spring-200 dark:bg-amethyst-800 text-justify">
                         I&apos;m a proud father of a little girl, and our family includes a &apos;really good boy&apos; (our dog!). Outside of coding, I love to make music, woodworking, hiking, and traveling, although most of my free time lately has been dedicated to coding and development.
                     </p>
                 </AnimatedInView>

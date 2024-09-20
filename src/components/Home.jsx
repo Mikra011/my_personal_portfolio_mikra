@@ -53,9 +53,9 @@ export default function Home() {
                             threshold={0.2}>
                             <p
                                 className="
-                            p-6 text-base md:text-xl text-left font-kurale
+                            p-6 text-base md:text-xl text-left font-kurale text-justify
                             rounded-xl bg-spring-200 dark:bg-amethyst-800">
-                                I&apos;m Robert, a passionate and dedicated aspiring <span className="font-alfa">Full Stack Developer</span>. I specialize in creating dynamic and responsive web applications using technologies like <span className="font-alfa">JavaScript, React and Node.js</span>. I&apos;m eager to bring my skills and enthusiasm to a forward-thinking development team.
+                                I&apos;m Robert, a passionate and dedicated emerging <span className="font-alfa">Full Stack Developer</span>. I specialize in creating dynamic and responsive web applications using technologies like <span className="font-alfa">JavaScript, React and Node.js</span>. I&apos;m eager to bring my skills and enthusiasm to a forward-thinking development team.
                             </p>
                         </AnimatedInView>
 
