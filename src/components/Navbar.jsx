@@ -93,7 +93,7 @@ export default function Navbar(props) {
         {menuItems.map(item => (
           <li key={item.to}>
             <button onClick={() => navigate(item.to)} className="
-            m-1 block rounded-full p-2 text-sm font-play font-medium
+            m-1 block rounded-full p-2 text-sm md:text-lg font-play font-medium
             border-2 border-transparent bg-spring-100 dark:bg-amethyst-900
             hover:border-oasis-600 hover:border-2
             focus:text-amethyst-500">

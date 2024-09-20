@@ -52,7 +52,7 @@ export default function CallToContact() {
                         onClick={handleClick}
                         className="
                         rounded-full p-2 bg-scarlet-400
-                        hover:bg-oasis-600 
+                        hover:bg-oasis-600 text-sm md:text-lg
                         font-play font-medium">
                         Contact Me Here
                     </button>

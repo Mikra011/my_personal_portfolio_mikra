@@ -16,6 +16,8 @@ export const skillsData = {
             'Render',
             'Nodemon',
             'SqLite',
+            'Npm',
+            'Eslint',
         ],
         occasional: [
             'Bycrypt',
@@ -25,7 +27,6 @@ export const skillsData = {
             'Jest',
             'Vercel',
             'Heroku',
-            'Eslint',
             'Sass',
             'PostgreSql',
             'TDD',

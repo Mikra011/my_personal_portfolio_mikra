@@ -59,7 +59,6 @@ export default function App() {
                                 <div className='z-[91] w-4/5 h-1/5 bg-spring-200 dark:bg-amethyst-800'></div>
                                 <div className='z-[91] w-full h-1/5 bg-spring-200 dark:bg-amethyst-800'></div>
                             </div>
-
                             <div className="flex flex-col items-end page-overlay-r">
                                 <div className='z-[91] w-4/5 h-1/5 bg-spring-200 dark:bg-amethyst-800'></div>
                                 <div className='z-[91] w-full h-1/5 bg-spring-200 dark:bg-amethyst-800'></div>
@@ -67,6 +66,8 @@ export default function App() {
                                 <div className='z-[91] w-full h-1/5 bg-spring-200 dark:bg-amethyst-800'></div>
                                 <div className='z-[91] w-4/5 h-1/5 bg-spring-200 dark:bg-amethyst-800'></div>
                             </div>
+
+
                             <div className="page-content">
                                 <Routes location={displayLocation}>
                                     <Route path='/' element={<LandingPage />} />

@@ -5,26 +5,39 @@ import ImageImporter from "../components/ImageImporter"
 import '../styles/parallaxpictures.css'
 import CallToContact from "./CallToContact";
 import Skills from "./Skills";
+import AnimatedInView from "./AnimatedInView";
+import ChangingText from "./ChangingText";
+import { useNavigate } from 'react-router-dom';
 
 export default function About() {
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState([])
+
+    const navigate = useNavigate()
+
+    const handleContactClick = () => {
+        navigate('/contacts')
+    }
+
+    const handleProjectsClick = () => {
+        navigate('/projects')
+    }
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const elements = document.querySelectorAll('[data-speed]');
+            const elements = document.querySelectorAll('[data-speed]')
 
             elements.forEach(el => {
-                const speed = parseFloat(el.getAttribute('data-speed')) || 0;
-                el.style.transform = `translateX(${scrollY * speed}px)`;
-            });
-        };
+                const speed = parseFloat(el.getAttribute('data-speed')) || 0
+                el.style.transform = `translateX(${scrollY * speed}px)`
+            })
+        }
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll)
         handleScroll(); // Call once to set initial positions
 
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
         <div id="about" className="p-1 md:p-6">
@@ -95,15 +108,15 @@ export default function About() {
 
             <section
                 className="
-                h-screen p-4 md:p-20 flex flex-col lg:flex-row 
+                p-4 md:p-20 flex flex-col lg:flex-row 
                 space-y-8 lg:space-x-16 justify-center items-center">
                 <div>
                     <div className="border w-[200px] md:w-[400px] h-[200px] md:h-[400px]"></div>
                 </div>
                 <div
                     className="
-                    p-4 m-4 w-[300px] md:w-[600px] font-kurale 
-                    text-xs md:text-sm lg:text-base rounded-xl 
+                    p-4 m-4 w-[300px] md:w-[600px] lg:w-[750px] font-kurale 
+                    text-sm md:text-md lg:text-lg rounded-xl 
                     bg-spring-200 dark:bg-amethyst-800">
                     <p className="mb-4">
                         Hello! It&apos;s a pleasure to introduce myself.
@@ -190,11 +203,32 @@ export default function About() {
                 <Skills />
             </section>
 
-            <section className="p-4 h-screen flex flex-col justify-center items-center">
-                <h1 className="p-4 font-play text-2xl font-semibold">On a personal note:</h1>
-                <p className="p-4 font-kurale text-md"> 
-                    I&apos;m a proud father of a little girl, and our family includes a &apos;really good boy&apos; (our dog!). Outside of coding, I love to make music, woodworking, hiking, and traveling, although most of my free time lately has been dedicated to coding and development.
-                </p>
+            <section
+                className="
+                p-4 h-screen flex flex-col md:flex-row space-y-8 md:space-x-8 
+                justify-center items-center">
+                <AnimatedInView
+                    baseClass="animated-drop-grow"
+                    animationClass="animate-dg"
+                    threshold={0.2}>
+                    <h1
+                        className="
+                        p-4 font-play text-3xl md:text-4xl lg:text-6xl font-semibold 
+                        w-[300px] md:w-[400px] lg:w-[600px] font-play">
+                        On a personal note:</h1>
+                </AnimatedInView>
+
+                <AnimatedInView
+                    baseClass="animated-grow"
+                    animationClass="animate-g"
+                    threshold={0.2}>
+                    <p
+                        className="
+                        p-4 font-kurale text-md lg:text-xl w-[300px] lg:w-[400px]
+                        rounded-xl bg-spring-200 dark:bg-amethyst-800">
+                        I&apos;m a proud father of a little girl, and our family includes a &apos;really good boy&apos; (our dog!). Outside of coding, I love to make music, woodworking, hiking, and traveling, although most of my free time lately has been dedicated to coding and development.
+                    </p>
+                </AnimatedInView>
             </section>
 
             <section className="h-vh-50 md:h-screen ">
@@ -202,12 +236,89 @@ export default function About() {
                 <ImageGrid images={images} />
             </section>
 
-            <section className="h-screen pt-12">
-                <p>
-                    I&apos;m excited to join a collaborative team where I can continue learning, take on challenges, and benefit from the guidance of experienced professionals.
-                    I thrive in environments that value best practices, and I&apos;m eager to contribute to impactful projects.
-                    Feel free to explore my work and reach out—I&apos;d love to connect and discuss how I can contribute to your team!
-                </p>
+            <section className="p-8 pt-48 flex justify-center items-center">
+                <div
+                    className="
+                        flex flex-col justify-canter items-center
+                        text-xl md:text-2xl lg:text-4xl text-center">
+
+                    <AnimatedInView
+                        baseClass="animated-left"
+                        animationClass="animate-l"
+                        threshold={0.2}>
+                        <p
+                            className="
+                            p-8 font-kurale">
+                            I&apos;m excited to join a <span className="font-bold font-alfa">collaborative</span> team where I can:
+                        </p>
+                    </AnimatedInView>
+
+                    <ChangingText />
+
+                    <div
+                        className="
+                            p-8 font-kurale">
+
+                        <AnimatedInView
+                            baseClass="animated-right"
+                            animationClass="animate-r"
+                            threshold={0.2}>
+                            <p>Feel free to explore</p>
+                        </AnimatedInView>
+
+                        <AnimatedInView
+                            baseClass="animated-grow"
+                            animationClass="animate-g"
+                            threshold={0.2}>
+                            <div className="m-4">
+                                <button
+                                    onClick={handleProjectsClick}
+                                    className="
+                                    rounded-full p-2 bg-scarlet-400
+                                    hover:bg-oasis-600 text-sm md:text-lg
+                                    font-play font-medium">
+                                    my work
+                                </button>
+                            </div>
+                        </AnimatedInView>
+
+                        <AnimatedInView
+                            baseClass="animated-left"
+                            animationClass="animate-l"
+                            threshold={0.2}>
+                            <p>and</p>
+                        </AnimatedInView>
+
+                        <AnimatedInView
+                            baseClass="animated-grow"
+                            animationClass="animate-g"
+                            threshold={0.2}>
+                            <div className="m-4">
+                                <button
+                                    onClick={handleContactClick}
+                                    className="
+                                    rounded-full p-2 bg-scarlet-400
+                                    hover:bg-oasis-600 text-sm md:text-lg
+                                    font-play font-medium">
+                                    reach out
+                                </button>
+                            </div>
+                        </AnimatedInView>
+
+                        <AnimatedInView
+                            baseClass="animated-right"
+                            animationClass="animate-r"
+                            threshold={0.2}>
+                            <p>
+                                I&apos;d love to connect and discuss how I can contribute to your team!
+                            </p>
+                        </AnimatedInView>
+                    </div>
+                </div>
+
+
+
+
             </section>
 
             <CallToContact />
