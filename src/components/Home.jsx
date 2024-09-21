@@ -90,12 +90,6 @@ export default function Home() {
                 <div className="size-32 border-2 border-scarlet-400 rounded-xl bg-spring-200 dark:bg-amethyst-800">
 
                 </div>
-                <div className="size-32 border-2 border-scarlet-400 rounded-xl bg-spring-200 dark:bg-amethyst-800">
-
-                </div>
-                <div className="size-32 border-2 border-scarlet-400 rounded-xl bg-spring-200 dark:bg-amethyst-800">
-
-                </div>
 
                 <AnimatedInView
                     baseClass="animated-grow"
