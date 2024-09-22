@@ -17,13 +17,12 @@
 
 .animated-welcome {
     position: relative;
-    text-transform: uppercase;
     overflow: hidden;
-    background: linear-gradient(180deg, #EEFCF9, #06231D, #EEFCF9); 
+    background: linear-gradient(90deg, #EEFCF9, #06231D, #EEFCF9); 
     background-repeat: no-repeat;
-    background-size: 100% 70%; 
-    animation: animate 4.5s linear 1, fadeOut 0.5s linear 1 forwards;
-    animation-delay: 0s, 4s;
+    background-size: 80%; 
+    animation: animate 3.5s linear 1, fadeOut 0.5s linear 1 forwards;
+    animation-delay: 0s, 3s;
     background-clip: text;
     color: rgba(0, 0, 0, 0);
 }
@@ -35,11 +34,10 @@
 
 @keyframes animate {
     0% {
-        background-position: 0% -500%;
+        background-position: -500%; /* Start from the left side */
     }
-
     100% {
-        background-position: 0% 500%;
+        background-position: 500%;
     }
 }
 

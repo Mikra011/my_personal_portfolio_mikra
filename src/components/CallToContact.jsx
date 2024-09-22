@@ -11,7 +11,7 @@ export default function CallToContact() {
 
 
     return (
-        <section className="h-screen flex flex-col items-center justify-center pt-16">
+        <section className="flex flex-col items-center justify-center pt-16">
 
             <div className="flex flex-col items-center">
                 <div className="flex flex-row items-start ">
@@ -47,7 +47,7 @@ export default function CallToContact() {
                 baseClass="animated-drop-grow"
                 animationClass="animate-dg"
                 threshold={0.2}>
-                <div className="mt-24 relative">
+                <div className="mt-24 relative mb-16">
                     <button
                         onClick={handleClick}
                         className="

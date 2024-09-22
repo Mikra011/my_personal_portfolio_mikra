@@ -14,7 +14,7 @@ export default function LandingPage() {
                 setShowWelcome(false);
                 navigate('home'); // Navigate to home after hiding the welcome message
             }, 1000); // Match this with the duration of the fade-out animation
-        }, 4500); // 4.5 seconds to match the animation duration
+        }, 3500); // 4.5 seconds to match the animation duration
 
         return () => clearTimeout(timer); // Cleanup the timeout if the component unmounts
     }, [navigate]);
@@ -27,10 +27,7 @@ export default function LandingPage() {
                         <h1 className="animated-welcome ">
                             <div className='flex flex-col' >
                                 <span>
-                                    ROBERT&apos;S
-                                </span>
-                                <span>
-                                    PORTFOLIO
+                                    WELCOME
                                 </span>
                             </div>
 
