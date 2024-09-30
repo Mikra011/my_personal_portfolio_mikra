@@ -1,9 +1,7 @@
 const projectImages = [
-    "https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Image+1",
-    "https://via.placeholder.com/600x400/00FF00/FFFFFF?text=Image+2",
-    "https://via.placeholder.com/600x400/0000FF/FFFFFF?text=Image+3",
-    "https://via.placeholder.com/600x400/FFFF00/FFFFFF?text=Image+4",
-    "https://via.placeholder.com/600x400/FF00FF/FFFFFF?text=Image+5"
+    'https://live.staticflickr.com/65535/54032089673_fba6485bb8_b.jpg',
+    'https://live.staticflickr.com/65535/54032167034_7c4b7c4588_b.jpg',
+    'https://live.staticflickr.com/65535/54030966927_836d6ac740_b.jpg'
 ];
 
 export default projectImages;
