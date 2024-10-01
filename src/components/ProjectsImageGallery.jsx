@@ -39,7 +39,7 @@ export default function ProjectsImageGallery() {
                     <img
                         src={projectImages[currentImageIndex]}
                         alt={`Slide ${currentImageIndex + 1}`}
-                        className='h-[200px] md:h-[300px] lg:h-[400px]'
+                        className='w-[300px] md:w-[400px] lg:w-[600px]'
                     />
                 </div>
 

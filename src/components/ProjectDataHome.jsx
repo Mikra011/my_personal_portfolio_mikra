@@ -8,7 +8,7 @@ export default function ProjectDataHome() {
     return (
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start space-y-4 md:space-x-8 p-4">
             {/* Left side for images */}
-            <div className="p-4 flex lg:flex-row space-x-4">
+            <div className="flex lg:flex-row space-x-4">
                 <ProjectsImageGallery />
             </div>
 
