@@ -30,16 +30,9 @@ export default function Navbar(props) {
       ? 'hidden'
       : 'fixed top-0 w-full z-50 md:flex md:justify-between md:items-center'}>
       <div className='px-3 py-3 flex justify-between items-center'>
-        {/* <section>
-          <h1
-            className="text-lg md:text-xl lg:text-2xl font-bold 
-          leading-tight md:leading-none text-center md:text-left">
-            <span className="font-handwritten">Robert&apos;s Portfolio Site</span>
-          </h1>
-        </section> */}
-
         <button
           onClick={toggleMode}
+          data-testid="theme-toggle-button"
           className='
           p-1 rounded-full bg-spring-100 dark:bg-amethyst-900'>
           <svg id="theme-toggle-dark-icon" className={props.darkMode ? 'hidden w-5 h-5' : 'w-5 h-5 transition-transform duration-200 hover:scale-125'} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -47,9 +40,11 @@ export default function Navbar(props) {
         </button>
 
         <section className="md:hidden">
-          <button onClick={toggleIsOpen}
+          <button
+            onClick={toggleIsOpen}
+            data-testid="navbar-burger"
             className="
-            navbar-burger flex items-center rounded-full 
+            flex items-center rounded-full 
             px-3 py-1 border-transparent border-2
             hover:border-oasis-600 hover:border-2
             bg-spring-100 dark:bg-amethyst-900" >
@@ -72,7 +67,9 @@ export default function Navbar(props) {
       </div>
 
       {/* Menu for small screens */}
-      <ul className={!isOpen ? 'hidden' : "px-3 py-3 flex flex-col items-center justify-center min-h-[150px]"}>
+      <ul 
+      data-testid="mobile-menu"
+      className={!isOpen ? 'hidden' : "px-3 py-3 flex flex-col items-center justify-center min-h-[150px]"}>
         {menuItems.map(item => (
           <li key={item.to}>
             <button onClick={() => navigate(item.to)} className="

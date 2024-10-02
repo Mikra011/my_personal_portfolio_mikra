@@ -3,7 +3,7 @@ import RingText from "./RingText"
 import CallToContact from "./CallToContact"
 import InteractiveText from "./InteractiveText"
 import AnimatedInView from "./AnimatedInView"
-import ProjectDataHome from "./ProjectDataHome"
+import ProjectData from "./ProjectData"
 
 export default function Home() {
 
@@ -89,7 +89,7 @@ export default function Home() {
             flex flex-col
             justify-center items-center">
                 
-                <ProjectDataHome />
+                <ProjectData />
 
                 <AnimatedInView
                     baseClass="animated-grow"

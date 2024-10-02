@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
-import projectImages from '../assets/projectImages'
+import projectData from '../assets/projectData'; 
 
 export default function ProjectsImageGallery() {
+    // Assuming we want to display the first project
+    const project = projectData[0]
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     // Function to handle going to the previous image
     const prevImage = () => {
         setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? projectImages.length - 1 : prevIndex - 1
+            prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
         )
     }
 
     // Function to handle going to the next image
     const nextImage = () => {
         setCurrentImageIndex((prevIndex) =>
-            prevIndex === projectImages.length - 1 ? 0 : prevIndex + 1
+            prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
         )
     }
 
@@ -37,7 +39,7 @@ export default function ProjectsImageGallery() {
                 {/* Display the current image */}
                 <div className="">
                     <img
-                        src={projectImages[currentImageIndex]}
+                        src={project.images[currentImageIndex]} // Use project.images instead of projectImages
                         alt={`Slide ${currentImageIndex + 1}`}
                         className='w-[300px] md:w-[400px] lg:w-[600px]'
                     />
@@ -52,12 +54,12 @@ export default function ProjectsImageGallery() {
                 </button>
             </div>
 
-
             {/* Dots for navigation */}
             <div className="mt-4">
-                {projectImages.map((_, index) => (
+                {project.images.map((_, index) => (
                     <span
                         key={index}
+                        data-testid="dot"
                         onClick={() => goToImage(index)}
                         className={`inline-block h-3 w-3 rounded-full mx-1 cursor-pointer transition duration-300 ease-in-out ${currentImageIndex === index ? 'bg-scarlet-500' : 'bg-oasis-400'}`}
                     ></span>
@@ -66,4 +68,3 @@ export default function ProjectsImageGallery() {
         </div>
     )
 }
-

@@ -11,7 +11,7 @@ export default function CallToContact() {
 
 
     return (
-        <section className="flex flex-col items-center justify-center pt-16">
+        <section className="h-screen flex flex-col items-center justify-center pt-16">
 
             <div className="flex flex-col items-center">
                 <div className="flex flex-row items-start ">
