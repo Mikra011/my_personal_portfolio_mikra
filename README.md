@@ -12,20 +12,23 @@ This is my personal portfolio website.
 
 ## Tech Stack
 
-- **React**: 
-A JavaScript library for building user interfaces. It allows for the creation of reusable UI components, making it easier to manage the application’s state and lifecycle.
+## Tech Stack
 
-- **Vite**: 
-A modern build tool that provides a fast development environment and optimizes the application for production. It leverages native ES modules for a quicker refresh during development.
+- **React**:  
+  A JavaScript library for building user interfaces. It allows for the creation of reusable UI components, making it easier to manage the application’s state and lifecycle.
 
-- **Tailwind CSS**: 
-A utility-first CSS framework that enables rapid UI development. Its approach allows for the creation of responsive designs without writing custom CSS for every component.
+- **Vite**:  
+  A modern build tool that provides a fast development environment and optimizes the application for production. It leverages native ES modules for a quicker refresh during development.
 
-- **Plain CSS**: 
-Used for simple styles and global styling needs, providing a baseline for layout and design. It was specifically utilized for styling elements that Tailwind could not handle effectively.
+- **Tailwind CSS**:  
+  A utility-first CSS framework that enables rapid UI development. Its approach allows for the creation of responsive designs without writing custom CSS for every component.
 
-- **Sass**: 
-Used in the project for a specific use case that was not possible with either Tailwind or Plain CSS. Sass enables advanced styling features, such as variables and nesting, to create more complex styles.
+- **Plain CSS**:  
+  Used for simple styles and global styling needs, providing a baseline for layout and design. It was specifically utilized for styling elements that Tailwind could not handle effectively.
+
+- **Sass**:  
+  Used in the project for a specific use case that was not possible with either Tailwind or Plain CSS. Sass enables advanced styling features, such as variables and nesting, to create more complex styles.
+
 
 
 ## Colors
@@ -86,3 +89,9 @@ For more detailed information about usage, please refer to the component itself 
 ## Testing
 
 A few basic tests have been written for the project; however, they should be expanded. I am not fully satisfied with the current coverage.
+
+## Deployment
+
+The site is deployed on Render using the free tier, which may result in slower response times (up to 50 seconds). While this tier is suitable for development and testing purposes, users may experience delays during peak usage times. 
+
+I will consider upgrading to a paid plan to ensure better performance and reliability.
