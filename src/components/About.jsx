@@ -128,7 +128,7 @@ export default function About() {
                         Hello! It&apos;s a pleasure to introduce myself.
                     </p>
                     <p className="mb-4">
-                        I&apos;m Robert Tóth-Ludányi, an ambitious full-stack developer actively honing my skills through <span className="font-alfa">daily coding</span>, driven by a passion for building meaningful solutions and creating seamless user experiences.
+                        I&apos;m Robert Toth-Ludanyi, an ambitious full-stack developer actively honing my skills through <span className="font-alfa">daily coding</span>, driven by a passion for building meaningful solutions and creating seamless user experiences.
                         I am currently completing an 18-month program at <span className="font-alfa">Bloomtech Institute</span> (70% finished), where I&apos;ve been honing my skills in software development.
                     </p>
                     <p className="mb-4">
