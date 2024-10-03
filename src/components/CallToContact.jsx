@@ -51,7 +51,7 @@ export default function CallToContact() {
                     <button
                         onClick={handleClick}
                         className="
-                        rounded-full p-2 bg-scarlet-400
+                        rounded-full p-2 bg-scarlet-300 dark:bg-scarlet-400
                         hover:bg-oasis-600 text-sm md:text-lg
                         font-play font-medium">
                         Contact Me Here

@@ -199,6 +199,8 @@ const config = {
   moduleFileExtensions: ['js', 'jsx'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': '<rootDir>/__mocks__/styleMock.js', // Mock CSS imports
+    '\\.(gif|jpg|jpeg|png|svg)$': 'test-file-stub', // Mock image
+    '\\.(pdf)$': '<rootDir>/__mocks__/fileMock.js', // Mock PDF
   },
 };
 

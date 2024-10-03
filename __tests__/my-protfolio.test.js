@@ -1,13 +1,16 @@
-// __tests__/Navbar.test.js
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { useNavigate, BrowserRouter as Router } from 'react-router-dom';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { useNavigate, MemoryRouter, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '../src/components/Navbar';
 import RingText from '../src/components/RingText';
+import Footer from '../src/components/Footer';
 import ProjectsImageGallery from '../src/components/ProjectsImageGallery';
+import CallToContact from '../src/components/CallToContact';
+import Contacts from '../src/components/Contacts';
 import ProjectData from '../src/components/ProjectData';
-import projectData from '../src/assets/projectData';
+
+jest.mock('../src/components/AnimatedInView', () => ({ children }) => <div>{children}</div>);
 
 jest.mock('../src/assets/projectData', () => [
   {
@@ -28,6 +31,7 @@ jest.mock('react-router-dom', () => ({
 
 // Mock the setDarkMode function
 const mockSetDarkMode = jest.fn()
+
 const mockNavigate = jest.fn()
 
 describe('Navbar Component', () => {
@@ -252,7 +256,7 @@ describe('ProjectData Component', () => {
     const githubLink = screen.getByRole('link', { name: /Github/i })
     expect(githubLink).toBeInTheDocument() // Check if the GitHub link is rendered
     expect(githubLink).toHaveAttribute('href', 'https://github.com/Mikra011/arcade_clone') // Check the URL
-  });
+  })
 
   test('renders Try it link with correct URL', () => {
     render(<ProjectData />)
@@ -292,7 +296,116 @@ describe('ProjectData Component', () => {
     // Simulate click (check that it doesn't throw an error)
     fireEvent.click(tryItLink)
   })
-
 })
 
+describe('Footer Component', () => {
+  test('renders correctly on non-landing pages', () => {
+    const { getByTestId } = render(
+      <MemoryRouter initialEntries={['/about']}>
+        <Footer />
+      </MemoryRouter>
+    )
+
+    // Check if the GitHub and LinkedIn links are rendered
+    expect(getByTestId('github-link')).toBeInTheDocument()
+    expect(getByTestId('linkedin-link')).toBeInTheDocument()
+    expect(getByTestId('resume-link')).toBeInTheDocument()
+  })
+
+  test('does not render on the landing page', () => {
+    const { container } = render(
+      <MemoryRouter initialEntries={['/']}>
+        <Footer />
+      </MemoryRouter>
+    )
+
+    // Check if the footer has the 'hidden' class
+    const footerElement = container.firstChild // Get the first child (the footer)
+    expect(footerElement).toHaveClass('hidden') // Check for the 'hidden' class
+  })
+
+  test('links open in a new tab', () => {
+    const { getByTestId } = render(
+      <MemoryRouter initialEntries={['/about']}>
+        <Footer />
+      </MemoryRouter>
+    )
+
+    // Check if the links have the target attribute
+    expect(getByTestId('github-link')).toHaveAttribute('target', '_blank')
+    expect(getByTestId('linkedin-link')).toHaveAttribute('target', '_blank')
+    expect(getByTestId('resume-link')).toHaveAttribute('target', '_blank')
+  })
+
+  test('renders the correct href for GitHub and LinkedIn links', () => {
+    const { getByTestId } = render(
+      <MemoryRouter initialEntries={['/about']}>
+        <Footer />
+      </MemoryRouter>
+    )
+
+    // Check the href attributes
+    expect(getByTestId('github-link')).toHaveAttribute('href', 'https://github.com/Mikra011')
+    expect(getByTestId('linkedin-link')).toHaveAttribute('href', 'https://www.linkedin.com/in/toth-ludanyi-robert-376ab92a4/')
+    expect(getByTestId('resume-link')).toHaveAttribute('href', 'test-file-stub') // Update to match the mock value
+  })
+})
+
+describe('CallToContact Component', () => {
+  beforeEach(() => {
+    jest.spyOn(require('react-router-dom'), 'useNavigate').mockImplementation(() => mockNavigate)
+  })
+
+  afterEach(() => {
+    jest.clearAllMocks() // Clear any mock calls between tests
+  })
+
+  test('renders the Contact Me button and it is visible', () => {
+    render(
+      <MemoryRouter>
+        <CallToContact />
+      </MemoryRouter>
+    )
+
+    // Check if the button is in the document
+    const buttonElement = screen.getByRole('button', { name: /Contact Me Here/i })
+    expect(buttonElement).toBeInTheDocument() // Check if the button is rendered
+    expect(buttonElement).toBeVisible() // Check if the button is visible
+  })
+
+  test('clicking the Contact Me button navigates to the contacts page', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}> {/* Initial route is the home page */}
+        <Routes>
+          <Route path="/" element={<CallToContact />} />
+          <Route path="/contacts" element={<Contacts />} /> {/* Define the contacts route */}
+        </Routes>
+      </MemoryRouter>
+    )
+
+    // Find the button
+    const buttonElement = screen.getByRole('button', { name: /Contact Me Here/i });
+
+     // Assert that the button is clickable (not disabled)
+    expect(buttonElement).not.toBeDisabled()
+
+    // Simulate a click on the button
+    fireEvent.click(buttonElement)
+
+    // Now check if the Contacts component has been rendered
+    // You can assert based on any text or element that is present in the Contacts component
+    expect(screen.getByText(/contact me/i)).toBeInTheDocument() // Assuming there's text in Contacts that confirms it's rendered
+  })
+})
+
+describe('Contacts Component', () => {
+  test('renders the Send button and it is visible', () => {
+    render(<Contacts />)
+
+    // Check if the Send button is in the document
+    const buttonElement = screen.getByRole('button', { name: /Send/i })
+    expect(buttonElement).toBeInTheDocument() // Check if the button is rendered
+    expect(buttonElement).toBeVisible() // Check if the button is visible
+  })
+})
 

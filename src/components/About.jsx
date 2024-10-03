@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import AnimatedInView from "./AnimatedInView";
 import ChangingText from "./ChangingText";
 import { useNavigate } from 'react-router-dom';
+import me from '../assets/Robert.jpg'
 
 export default function About() {
     const [images, setImages] = useState([])
@@ -109,9 +110,14 @@ export default function About() {
             <section
                 className="
                 p-4 md:p-20 flex flex-col lg:flex-row 
-                space-y-8 lg:space-x-16 justify-center items-center">
+                space-y-8 lg:space-y-0 lg:space-x-16 justify-center items-center lg:items-start ">
                 <div>
-                    <div className="border w-[200px] md:w-[400px] h-[200px] md:h-[400px]"></div>
+                    <div>
+                        <img 
+                        src={me} 
+                        alt="me" 
+                        className="w-[200px] md:w-[300px] rounded-xl"/>
+                    </div>
                 </div>
                 <div
                     className="
@@ -155,7 +161,7 @@ export default function About() {
                             <span
                                 className="
                                 text-3xl md:text-6xl lg:text-8xl font-thin 
-                                mb-4 font-play tracking-widest mr-48 md:mr-32">
+                                mb-4 font-play tracking-widest mr-52 md:mr-32">
                                 curious
                                 <span className="text-2xl md:text-5xl lg:text-6xl font-dancing"> soul,</span>
                             </span>
@@ -165,7 +171,7 @@ export default function About() {
                     <div
                         className="
                         text-3xl md:text-6xl lg:text-8xl font-thin 
-                        mb-4 font-play tracking-widest mr-96 md:mr-64"
+                        mb-4 font-play tracking-widest mr-[470px] md:mr-64"
                         data-speed="0.25">
                         <span>learning </span>
                     </div>
@@ -174,7 +180,7 @@ export default function About() {
                         <span
                             className="
                             text-3xl md:text-7xl lg:text-9xl font-semibold 
-                            mb-4 font-play ml-[500px] md:ml-[750px] lg:mr-40 min-w-[170px] md:min-w-[700px]"
+                            mb-4 font-play ml-[600px] md:ml-[750px] lg:mr-40 min-w-[170px] md:min-w-[700px]"
                             data-speed="-0.15">
                             <span
                                 className="
@@ -274,7 +280,7 @@ export default function About() {
                                 <button
                                     onClick={handleProjectsClick}
                                     className="
-                                    rounded-full p-2 bg-scarlet-400
+                                    rounded-full p-2 bg-scarlet-300 dark:bg-scarlet-400
                                     hover:bg-oasis-600 text-sm md:text-lg
                                     font-play font-medium">
                                     my work
@@ -297,7 +303,7 @@ export default function About() {
                                 <button
                                     onClick={handleContactClick}
                                     className="
-                                    rounded-full p-2 bg-scarlet-400
+                                    rounded-full p-2 bg-scarlet-300 dark:bg-scarlet-400
                                     hover:bg-oasis-600 text-sm md:text-lg
                                     font-play font-medium">
                                     reach out
