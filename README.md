@@ -10,15 +10,23 @@ This is my personal portfolio website.
 - Visit your app by navigating Chrome to `http://localhost:5173`
 
 
-## Tech Stack:
+## Tech Stack
 
-- react
-- vite
-- tailwind
+- **React**: A JavaScript library for building user interfaces. It allows for the creation of reusable UI components, making it easier to manage the application’s state and lifecycle.
+
+- **Vite**: A modern build tool that provides a fast development environment and optimizes the application for production. It leverages native ES modules for a quicker refresh during development.
+
+- **Tailwind CSS**: A utility-first CSS framework that enables rapid UI development. Its approach allows for the creation of responsive designs without writing custom CSS for every component.
+
+- **Plain CSS**: Used for simple styles and global styling needs, providing a baseline for layout and design. It was specifically utilized for styling elements that Tailwind could not handle effectively.
+
+- **Sass**: Used in the project for a specific use case that was not possible with either Tailwind or Plain CSS. Sass enables advanced styling features, such as variables and nesting, to create more complex styles.
+
 
 ## Colors
 
 This project features both dark and light color schemes to enhance usability and aesthetics across different environments. The color palettes have been crafted using the Figma color wheel with a square palette type, ensuring a balanced and harmonious visual experience.
+
 
 ## Typography
 
@@ -45,9 +53,11 @@ For adding decorative and animated text elements, I use the following fonts:
 -   #### Alex Brush
     Alex Brush complements Dancing Script with its elegant and refined brush-stroke style. This font is suitable for decorative headers, invitations, or any text that requires a sophisticated and stylish touch.
 
+
 ## Form
 
 I chose to use the service provided by [formsubmit.co](https://formsubmit.co) for handling form submissions. While the implementation is user-friendly and effective, I am considering switching services due to frequent downtimes. To ensure I remain reachable, I have also added my email to the contact information.
+
 
 ## AnimatedInView
 
@@ -66,6 +76,7 @@ Here’s a simple example of how to use `AnimatedInView`:
 </AnimatedInView>
 ```
 For more detailed information about usage, please refer to the component itself within the project.
+
 
 ## Testing
 
