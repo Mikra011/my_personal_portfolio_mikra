@@ -4,7 +4,7 @@ This is my personal portfolio website.
 
 ## Project Setup
 
-- Clone repo: `git clone https://github.com/Mikra011/my_personal_portfolio_mikra`
+- Clone repo: `git clone https://github.com/Mikra011/my_personal_portfolio_mikra.git`
 - Run the following command to install all necessary dependencies: `npm install`
 - Launch the project in a development server executing `npm run dev`
 - Visit your app by navigating Chrome to `http://localhost:5173`
