@@ -24,7 +24,7 @@ This is my personal portfolio website.
   A utility-first CSS framework that enables rapid UI development. Its approach allows for the creation of responsive designs without writing custom CSS for every component.
 
 - **Plain CSS**:  
-  Used for simple styles and global styling needs, providing a baseline for layout and design. It was specifically utilized for styling elements that Tailwind could not handle effectively.
+  Used primarily for animations and specific styling needs that Tailwind could not effectively handle. It provides additional flexibility for creating unique visual effects without relying solely on utility classes.
 
 - **Sass**:  
   Used in the project for a specific use case that was not possible with either Tailwind or Plain CSS. Sass enables advanced styling features, such as variables and nesting, to create more complex styles.
