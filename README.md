@@ -12,15 +12,20 @@ This is my personal portfolio website.
 
 ## Tech Stack
 
-- **React**: A JavaScript library for building user interfaces. It allows for the creation of reusable UI components, making it easier to manage the application’s state and lifecycle.
+- **React**: 
+A JavaScript library for building user interfaces. It allows for the creation of reusable UI components, making it easier to manage the application’s state and lifecycle.
 
-- **Vite**: A modern build tool that provides a fast development environment and optimizes the application for production. It leverages native ES modules for a quicker refresh during development.
+- **Vite**: 
+A modern build tool that provides a fast development environment and optimizes the application for production. It leverages native ES modules for a quicker refresh during development.
 
-- **Tailwind CSS**: A utility-first CSS framework that enables rapid UI development. Its approach allows for the creation of responsive designs without writing custom CSS for every component.
+- **Tailwind CSS**: 
+A utility-first CSS framework that enables rapid UI development. Its approach allows for the creation of responsive designs without writing custom CSS for every component.
 
-- **Plain CSS**: Used for simple styles and global styling needs, providing a baseline for layout and design. It was specifically utilized for styling elements that Tailwind could not handle effectively.
+- **Plain CSS**: 
+Used for simple styles and global styling needs, providing a baseline for layout and design. It was specifically utilized for styling elements that Tailwind could not handle effectively.
 
-- **Sass**: Used in the project for a specific use case that was not possible with either Tailwind or Plain CSS. Sass enables advanced styling features, such as variables and nesting, to create more complex styles.
+- **Sass**: 
+Used in the project for a specific use case that was not possible with either Tailwind or Plain CSS. Sass enables advanced styling features, such as variables and nesting, to create more complex styles.
 
 
 ## Colors
