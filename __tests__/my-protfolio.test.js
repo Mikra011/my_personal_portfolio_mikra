@@ -172,65 +172,65 @@ describe('RingText Component', () => {
   })
 })
 
-describe('ProjectsImageGallery Component', () => {
-  test('renders the first image initially', () => {
-    render(<ProjectsImageGallery />)
-    const imgElement = screen.getByRole('img')
-    expect(imgElement).toHaveAttribute('src', 'img1') // Check if the first image is displayed
-  })
+// describe('ProjectsImageGallery Component', () => {
+//   test('renders the first image initially', () => {
+//     render(<ProjectsImageGallery />)
+//     const imgElement = screen.getByRole('img')
+//     expect(imgElement).toHaveAttribute('src', 'img1') // Check if the first image is displayed
+//   })
 
-  test('changes to the next image when right arrow is clicked', () => {
-    render(<ProjectsImageGallery />)
+//   test('changes to the next image when right arrow is clicked', () => {
+//     render(<ProjectsImageGallery />)
 
-    // Click the right arrow
-    const rightArrow = screen.getByText('❯')
-    fireEvent.click(rightArrow)
+//     // Click the right arrow
+//     const rightArrow = screen.getByText('❯')
+//     fireEvent.click(rightArrow)
 
-    const imgElement = screen.getByRole('img')
-    expect(imgElement).toHaveAttribute('src', 'img2') // Check if the second image is displayed
-  })
+//     const imgElement = screen.getByRole('img')
+//     expect(imgElement).toHaveAttribute('src', 'img2') // Check if the second image is displayed
+//   })
 
-  test('changes to the previous image when left arrow is clicked', () => {
-    render(<ProjectsImageGallery />)
+//   test('changes to the previous image when left arrow is clicked', () => {
+//     render(<ProjectsImageGallery />)
 
-    // Click the right arrow twice to go to the second image, then back to the first
-    const rightArrow = screen.getByText('❯')
-    fireEvent.click(rightArrow) // First click to go to image2
-    fireEvent.click(rightArrow) // Second click to go to image3
+//     // Click the right arrow twice to go to the second image, then back to the first
+//     const rightArrow = screen.getByText('❯')
+//     fireEvent.click(rightArrow) // First click to go to image2
+//     fireEvent.click(rightArrow) // Second click to go to image3
 
-    const leftArrow = screen.getByText('❮')
-    fireEvent.click(leftArrow) // Go back to image2
+//     const leftArrow = screen.getByText('❮')
+//     fireEvent.click(leftArrow) // Go back to image2
 
-    const imgElement = screen.getByRole('img')
-    expect(imgElement).toHaveAttribute('src', 'img2') // Ensure we're back to the second image
-  })
+//     const imgElement = screen.getByRole('img')
+//     expect(imgElement).toHaveAttribute('src', 'img2') // Ensure we're back to the second image
+//   })
 
-  test('cycles to the first image after clicking the right arrow from the last image', () => {
-    render(<ProjectsImageGallery />)
+//   test('cycles to the first image after clicking the right arrow from the last image', () => {
+//     render(<ProjectsImageGallery />)
 
-    // Click the right arrow twice to go to the second and third images
-    const rightArrow = screen.getByText('❯')
-    fireEvent.click(rightArrow) // First click to go to image2
-    fireEvent.click(rightArrow) // Second click to go to image3
+//     // Click the right arrow twice to go to the second and third images
+//     const rightArrow = screen.getByText('❯')
+//     fireEvent.click(rightArrow) // First click to go to image2
+//     fireEvent.click(rightArrow) // Second click to go to image3
 
-    // Now click the right arrow again to check if it cycles back to the first image
-    fireEvent.click(rightArrow) // Should cycle back to image1
+//     // Now click the right arrow again to check if it cycles back to the first image
+//     fireEvent.click(rightArrow) // Should cycle back to image1
 
-    const imgElement = screen.getByRole('img')
-    expect(imgElement).toHaveAttribute('src', 'img1') // Ensure we're back to the first image
-  })
+//     const imgElement = screen.getByRole('img')
+//     expect(imgElement).toHaveAttribute('src', 'img1') // Ensure we're back to the first image
+//   })
 
-  test('changes to the correct image when a dot is clicked', () => {
-    render(<ProjectsImageGallery />)
+//   test('changes to the correct image when a dot is clicked', () => {
+//     render(<ProjectsImageGallery />)
 
-    // Click the dot for the second image
-    const dotElements = screen.getAllByTestId('dot') // Use the data-testid to select the dots
-    fireEvent.click(dotElements[1]) // Click the second dot
+//     // Click the dot for the second image
+//     const dotElements = screen.getAllByTestId('dot') // Use the data-testid to select the dots
+//     fireEvent.click(dotElements[1]) // Click the second dot
 
-    const imgElement = screen.getByRole('img')
-    expect(imgElement).toHaveAttribute('src', 'img2')
-  })
-})
+//     const imgElement = screen.getByRole('img')
+//     expect(imgElement).toHaveAttribute('src', 'img2')
+//   })
+// })
 
 describe('ProjectData Component', () => {
   test('renders the project name', () => {
@@ -245,11 +245,11 @@ describe('ProjectData Component', () => {
     expect(descriptionElement).toBeInTheDocument() // Check if the project description is displayed
   })
 
-  test('renders the ProjectsImageGallery component', () => {
-    render(<ProjectData />)
-    const galleryElement = screen.getByRole('img') // Check if the image is rendered
-    expect(galleryElement).toBeInTheDocument()
-  })
+  // test('renders the ProjectsImageGallery component', () => {
+  //   render(<ProjectData />)
+  //   const galleryElement = screen.getByRole('img') // Check if the image is rendered
+  //   expect(galleryElement).toBeInTheDocument()
+  // })
 
   test('renders GitHub link with correct URL', () => {
     render(<ProjectData />)

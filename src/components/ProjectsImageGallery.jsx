@@ -1,55 +1,101 @@
-import React, { useState } from 'react';
-import projectData from '../assets/projectData'; 
+import React, { useState, useEffect, useRef } from 'react';
+import projectData from '../assets/projectData';
 
 export default function ProjectsImageGallery() {
-    // Assuming we want to display the first project
     const project = projectData[0]
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const containerRef = useRef(null)
 
-    // Function to handle going to the previous image
+    // Function to handle scrolling for small screens
+    const handleScroll = () => {
+        if (containerRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = containerRef.current
+            const maxScrollableDistance = scrollWidth - clientWidth
+            const scrollFraction = scrollLeft / maxScrollableDistance
+            const newImageIndex = Math.round(scrollFraction * (project.images.length - 1))
+            setCurrentImageIndex(newImageIndex)
+        }
+    }
+
+    // Handle dot click for small screens
+    const handleDotClick = (index) => {
+        if (containerRef.current) {
+            const container = containerRef.current
+            const imageWidth = container.clientWidth
+            const scrollTo = imageWidth * index
+            container.scrollTo({
+                left: scrollTo,
+                behavior: 'smooth'
+            })
+        }
+    }
+
+    // Functions for large screen navigation
     const prevImage = () => {
         setCurrentImageIndex((prevIndex) =>
             prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
         )
     }
 
-    // Function to handle going to the next image
     const nextImage = () => {
         setCurrentImageIndex((prevIndex) =>
             prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
         )
     }
 
-    // Function to handle dot click
     const goToImage = (index) => {
         setCurrentImageIndex(index)
     }
 
+    // Effect to handle scroll behavior on small screens
+    useEffect(() => {
+        const container = containerRef.current
+        if (container) {
+            container.addEventListener('scroll', handleScroll)
+        }
+
+        return () => {
+            if (container) {
+                container.removeEventListener('scroll', handleScroll)
+            }
+        }
+    })
+
     return (
         <div className="relative text-center">
-            <div className='flex '>
-                {/* Left arrow button */}
+            {/* Render for small screens */}
+            <div
+                className="
+                flex overflow-x-scroll scrollbar-hide snap-x w-[300px] md:hidden"
+                ref={containerRef}
+                style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}>
+                {project.images.map((image, index) => (
+                    <div key={index} className="snap-center flex-shrink-0" style={{ width: '100%' }}>
+                        <img src={image} alt={`Slide ${index + 1}`} className='w-[300px]' />
+                    </div>
+                ))}
+            </div>
+
+            {/* Render for larger screens */}
+            <div className="hidden md:flex">
                 <button
                     onClick={prevImage}
-                    className="absolute self-center bg-amethyst-900 bg-opacity-30 text-spring-100 p-2 cursor-pointer text-sm md:text-lg z-10 left-2.5"
-                >
+                    className="
+                    absolute self-center bg-amethyst-900 bg-opacity-30 
+                    text-spring-100 p-2 cursor-pointer text-sm md:text-lg z-10 left-2.5">
                     ❮
                 </button>
-
-                {/* Display the current image */}
                 <div className="">
                     <img
-                        src={project.images[currentImageIndex]} // Use project.images instead of projectImages
+                        src={project.images[currentImageIndex]}
                         alt={`Slide ${currentImageIndex + 1}`}
-                        className='w-[300px] md:w-[400px] lg:w-[600px]'
-                    />
+                        className='md:w-[400px] lg:w-[600px]' />
                 </div>
-
-                {/* Right arrow button */}
                 <button
                     onClick={nextImage}
-                    className="absolute self-center bg-amethyst-900 bg-opacity-30 text-spring-100 p-2 cursor-pointer text-sm md:text-lg z-10 right-2.5"
-                >
+                    className="
+                    absolute self-center bg-amethyst-900 bg-opacity-30 text-spring-100 p-2
+                     cursor-pointer text-sm md:text-lg z-10 right-2.5">
                     ❯
                 </button>
             </div>
@@ -59,9 +105,10 @@ export default function ProjectsImageGallery() {
                 {project.images.map((_, index) => (
                     <span
                         key={index}
-                        data-testid="dot"
-                        onClick={() => goToImage(index)}
-                        className={`inline-block h-3 w-3 rounded-full mx-1 cursor-pointer transition duration-300 ease-in-out ${currentImageIndex === index ? 'bg-scarlet-500' : 'bg-oasis-400'}`}
+                        onClick={() => (containerRef.current ? handleDotClick(index) : goToImage(index))}
+                        className={`
+                            inline-block h-3 w-3 rounded-full mx-1 cursor-pointer transition duration-300 
+                            ease-in-out ${currentImageIndex === index ? 'bg-scarlet-500' : 'bg-oasis-400'}`}
                     ></span>
                 ))}
             </div>
