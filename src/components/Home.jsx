@@ -31,7 +31,7 @@ export default function Home() {
                     <div className="flex flex-col items-center">
                         <InteractiveText />
                         <span className="font-play text-4xl md:text-6xl lg:text-8xl mb-2">
-                            Experineces
+                            Experiences
                         </span>
                         <span className="text-sm md:text-xl lg:text-2xl font-kurale font-semibold">
                             for your <span className="text-xl md:text-2xl lg:text-4xl">business</span>
