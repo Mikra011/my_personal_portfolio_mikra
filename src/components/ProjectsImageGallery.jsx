@@ -105,7 +105,14 @@ export default function ProjectsImageGallery() {
                 {project.images.map((_, index) => (
                     <span
                         key={index}
-                        onClick={() => (containerRef.current ? handleDotClick(index) : goToImage(index))}
+                        onClick={() => {
+                            if (window.innerWidth < 768) {
+                                handleDotClick(index) // Small screens
+                            } else {
+                                goToImage(index) // Large screens
+                            }
+                        }}
+                        data-testid="dot"
                         className={`
                             inline-block h-3 w-3 rounded-full mx-1 cursor-pointer transition duration-300 
                             ease-in-out ${currentImageIndex === index ? 'bg-scarlet-500' : 'bg-oasis-400'}`}

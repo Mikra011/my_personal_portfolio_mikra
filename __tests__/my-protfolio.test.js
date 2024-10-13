@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { useNavigate, MemoryRouter, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '../src/components/Navbar';
 import RingText from '../src/components/RingText';
@@ -10,7 +10,7 @@ import CallToContact from '../src/components/CallToContact';
 import Contacts from '../src/components/Contacts';
 import ProjectData from '../src/components/ProjectData';
 
-jest.mock('../src/components/AnimatedInView', () => ({ children }) => <div>{children}</div>);
+jest.mock('../src/components/AnimatedInView', () => ({ children }) => <div>{children}</div>)
 
 jest.mock('../src/assets/projectData', () => [
   {
@@ -33,94 +33,6 @@ jest.mock('react-router-dom', () => ({
 const mockSetDarkMode = jest.fn()
 
 const mockNavigate = jest.fn()
-
-describe('Navbar Component', () => {
-  beforeEach(() => {
-    // Ensure that the mocked useNavigate returns the mocked function
-    useNavigate.mockReturnValue(mockNavigate)
-
-    render(
-      <Router>
-        <Navbar darkMode={false} setDarkMode={mockSetDarkMode} />
-      </Router>
-    )
-  })
-
-  test('renders navbar and menu items', () => {
-    expect(screen.getAllByText(/Home/i).length).toBe(2)
-    expect(screen.getAllByText(/About/i).length).toBe(2)
-    expect(screen.getAllByText(/Projects/i).length).toBe(2)
-    expect(screen.getAllByText(/Contacts/i).length).toBe(2)
-  })
-
-  test('calls setDarkMode when the toggle button is clicked', () => {
-    const toggleButton = screen.getByTestId('theme-toggle-button')
-    fireEvent.click(toggleButton)
-    expect(mockSetDarkMode).toHaveBeenCalledWith(true)
-  })
-
-  test('toggles the mobile menu', () => {
-    // Simulate small screen size
-    window.innerWidth = 500
-    window.dispatchEvent(new Event('resize'))
-
-    const burgerButton = screen.getByTestId('navbar-burger')
-    fireEvent.click(burgerButton)
-
-    // Select the menu manually by test ID or another selector
-    const menu = screen.getByTestId('mobile-menu')
-
-    expect(menu).toHaveClass('flex') // Check if it's open
-
-    fireEvent.click(burgerButton)
-
-    expect(menu).toHaveClass('hidden') // Check if it's closed
-  })
-
-  test('navigates to the correct path when "Home" menu items are clicked', () => {
-    const homeButtons = screen.getAllByText(/Home/i)
-    expect(homeButtons.length).toBe(2);
-
-    fireEvent.click(homeButtons[0])
-    expect(mockNavigate).toHaveBeenCalledWith('/home')
-
-    fireEvent.click(homeButtons[1])
-    expect(mockNavigate).toHaveBeenCalledWith('/home')
-  })
-
-  test('navigates to the correct path when "About" menu items are clicked', () => {
-    const aboutButtons = screen.getAllByText(/About/i)
-    expect(aboutButtons.length).toBe(2)
-
-    fireEvent.click(aboutButtons[0])
-    expect(mockNavigate).toHaveBeenCalledWith('/about')
-
-    fireEvent.click(aboutButtons[1])
-    expect(mockNavigate).toHaveBeenCalledWith('/about')
-  })
-
-  test('navigates to the correct path when "Projects" menu items are clicked', () => {
-    const projectButtons = screen.getAllByText(/Projects/i);
-    expect(projectButtons.length).toBe(2)
-
-    fireEvent.click(projectButtons[0])
-    expect(mockNavigate).toHaveBeenCalledWith('/projects')
-
-    fireEvent.click(projectButtons[1])
-    expect(mockNavigate).toHaveBeenCalledWith('/projects')
-  })
-
-  test('navigates to the correct path when "Contacts" menu items are clicked', () => {
-    const contactButtons = screen.getAllByText(/Contacts/i)
-    expect(contactButtons.length).toBe(2)
-
-    fireEvent.click(contactButtons[0])
-    expect(mockNavigate).toHaveBeenCalledWith('/contacts')
-
-    fireEvent.click(contactButtons[1])
-    expect(mockNavigate).toHaveBeenCalledWith('/contacts')
-  })
-})
 
 describe('RingText Component', () => {
   const mockNavigate = jest.fn()
@@ -172,65 +84,68 @@ describe('RingText Component', () => {
   })
 })
 
-// describe('ProjectsImageGallery Component', () => {
-//   test('renders the first image initially', () => {
-//     render(<ProjectsImageGallery />)
-//     const imgElement = screen.getByRole('img')
-//     expect(imgElement).toHaveAttribute('src', 'img1') // Check if the first image is displayed
-//   })
+describe('ProjectsImageGallery Component', () => {
+  test('renders the first image initially', () => {
+    render(<ProjectsImageGallery />)
+    const imgElements = screen.getAllByRole('img')
+    expect(imgElements[imgElements.length - 1]).toHaveAttribute('src', 'img1') // Check if the first image is displayed
+  })
 
-//   test('changes to the next image when right arrow is clicked', () => {
-//     render(<ProjectsImageGallery />)
+  test('changes to the next image when right arrow is clicked', () => {
+    render(<ProjectsImageGallery />)
 
-//     // Click the right arrow
-//     const rightArrow = screen.getByText('❯')
-//     fireEvent.click(rightArrow)
+    // Click the right arrow
+    const rightArrow = screen.getByText('❯')
+    fireEvent.click(rightArrow)
 
-//     const imgElement = screen.getByRole('img')
-//     expect(imgElement).toHaveAttribute('src', 'img2') // Check if the second image is displayed
-//   })
+    const imgElements = screen.getAllByRole('img')
+    expect(imgElements[imgElements.length - 1]).toHaveAttribute('src', 'img2') // Check if the second image is displayed
+  })
 
-//   test('changes to the previous image when left arrow is clicked', () => {
-//     render(<ProjectsImageGallery />)
+  test('changes to the previous image when left arrow is clicked', () => {
+    render(<ProjectsImageGallery />)
 
-//     // Click the right arrow twice to go to the second image, then back to the first
-//     const rightArrow = screen.getByText('❯')
-//     fireEvent.click(rightArrow) // First click to go to image2
-//     fireEvent.click(rightArrow) // Second click to go to image3
+    // Click the right arrow twice to go to the second image, then back to the first
+    const rightArrow = screen.getByText('❯')
+    fireEvent.click(rightArrow) // First click to go to image2
+    fireEvent.click(rightArrow) // Second click to go to image3
 
-//     const leftArrow = screen.getByText('❮')
-//     fireEvent.click(leftArrow) // Go back to image2
+    const leftArrow = screen.getByText('❮')
+    fireEvent.click(leftArrow) // Go back to image2
 
-//     const imgElement = screen.getByRole('img')
-//     expect(imgElement).toHaveAttribute('src', 'img2') // Ensure we're back to the second image
-//   })
+    const imgElements = screen.getAllByRole('img')
+    expect(imgElements[imgElements.length - 1]).toHaveAttribute('src', 'img2') // Ensure we're back to the second image
+  })
 
-//   test('cycles to the first image after clicking the right arrow from the last image', () => {
-//     render(<ProjectsImageGallery />)
+  test('cycles to the first image after clicking the right arrow from the last image', () => {
+    render(<ProjectsImageGallery />)
 
-//     // Click the right arrow twice to go to the second and third images
-//     const rightArrow = screen.getByText('❯')
-//     fireEvent.click(rightArrow) // First click to go to image2
-//     fireEvent.click(rightArrow) // Second click to go to image3
+    // Click the right arrow twice to go to the second and third images
+    const rightArrow = screen.getByText('❯')
+    fireEvent.click(rightArrow) // First click to go to image2
+    fireEvent.click(rightArrow) // Second click to go to image3
 
-//     // Now click the right arrow again to check if it cycles back to the first image
-//     fireEvent.click(rightArrow) // Should cycle back to image1
+    // Now click the right arrow again to check if it cycles back to the first image
+    fireEvent.click(rightArrow) // Should cycle back to image1
 
-//     const imgElement = screen.getByRole('img')
-//     expect(imgElement).toHaveAttribute('src', 'img1') // Ensure we're back to the first image
-//   })
+    const imgElements = screen.getAllByRole('img')
+    expect(imgElements[imgElements.length - 1]).toHaveAttribute('src', 'img1') // Ensure we're back to the first image
+  })
 
-//   test('changes to the correct image when a dot is clicked', () => {
-//     render(<ProjectsImageGallery />)
+  test('changes to the correct image when a dot is clicked', () => {
+    // Mock the scrollTo function
+    window.HTMLElement.prototype.scrollTo = jest.fn()
 
-//     // Click the dot for the second image
-//     const dotElements = screen.getAllByTestId('dot') // Use the data-testid to select the dots
-//     fireEvent.click(dotElements[1]) // Click the second dot
+    render(<ProjectsImageGallery />)
 
-//     const imgElement = screen.getByRole('img')
-//     expect(imgElement).toHaveAttribute('src', 'img2')
-//   })
-// })
+    // Click the dot for the second image
+    const dotElements = screen.getAllByTestId('dot') // Use the data-testid to select the dots
+    fireEvent.click(dotElements[1]) // Click the second dot
+
+    const imgElements = screen.getAllByRole('img')
+    expect(imgElements[imgElements.length - 1]).toHaveAttribute('src', 'img2')
+  })
+})
 
 describe('ProjectData Component', () => {
   test('renders the project name', () => {
@@ -245,11 +160,17 @@ describe('ProjectData Component', () => {
     expect(descriptionElement).toBeInTheDocument() // Check if the project description is displayed
   })
 
-  // test('renders the ProjectsImageGallery component', () => {
-  //   render(<ProjectData />)
-  //   const galleryElement = screen.getByRole('img') // Check if the image is rendered
-  //   expect(galleryElement).toBeInTheDocument()
-  // })
+  test('renders the ProjectsImageGallery component', () => {
+    render(<ProjectData />)
+
+    // Get all images and check if at least one image is rendered
+    const galleryElements = screen.getAllByRole('img') // This returns an array
+    expect(galleryElements.length).toBeGreaterThan(0) // Check if the array is not empty
+
+    // Optionally, you can check if a specific image is in the document
+    expect(galleryElements[0]).toBeInTheDocument() // Check if the first image is rendered
+  })
+
 
   test('renders GitHub link with correct URL', () => {
     render(<ProjectData />)
@@ -386,7 +307,7 @@ describe('CallToContact Component', () => {
     // Find the button
     const buttonElement = screen.getByRole('button', { name: /Contact Me Here/i });
 
-     // Assert that the button is clickable (not disabled)
+    // Assert that the button is clickable (not disabled)
     expect(buttonElement).not.toBeDisabled()
 
     // Simulate a click on the button
@@ -406,6 +327,94 @@ describe('Contacts Component', () => {
     const buttonElement = screen.getByRole('button', { name: /Send/i })
     expect(buttonElement).toBeInTheDocument() // Check if the button is rendered
     expect(buttonElement).toBeVisible() // Check if the button is visible
+  })
+})
+
+describe('Navbar Component', () => {
+  beforeEach(() => {
+    // Ensure that the mocked useNavigate returns the mocked function
+    useNavigate.mockReturnValue(mockNavigate)
+
+    render(
+      <Router>
+        <Navbar darkMode={false} setDarkMode={mockSetDarkMode} />
+      </Router>
+    )
+  })
+
+  test('renders navbar and menu items', () => {
+    expect(screen.getAllByText(/Home/i).length).toBe(2)
+    expect(screen.getAllByText(/About/i).length).toBe(2)
+    expect(screen.getAllByText(/Projects/i).length).toBe(2)
+    expect(screen.getAllByText(/Contacts/i).length).toBe(2)
+  })
+
+  test('calls setDarkMode when the toggle button is clicked', () => {
+    const toggleButton = screen.getByTestId('theme-toggle-button')
+    fireEvent.click(toggleButton)
+    expect(mockSetDarkMode).toHaveBeenCalledWith(true)
+  })
+
+  test('toggles the mobile menu', () => {
+    // Simulate small screen size
+    window.innerWidth = 500
+    window.dispatchEvent(new Event('resize'))
+
+    const burgerButton = screen.getByTestId('navbar-burger')
+    fireEvent.click(burgerButton)
+
+    // Select the menu manually by test ID or another selector
+    const menu = screen.getByTestId('mobile-menu')
+
+    expect(menu).toHaveClass('flex') // Check if it's open
+
+    fireEvent.click(burgerButton)
+
+    expect(menu).toHaveClass('hidden') // Check if it's closed
+  })
+
+  test('navigates to the correct path when "Home" menu items are clicked', () => {
+    const homeButtons = screen.getAllByText(/Home/i)
+    expect(homeButtons.length).toBe(2);
+
+    fireEvent.click(homeButtons[0])
+    expect(mockNavigate).toHaveBeenCalledWith('/home')
+
+    fireEvent.click(homeButtons[1])
+    expect(mockNavigate).toHaveBeenCalledWith('/home')
+  })
+
+  test('navigates to the correct path when "About" menu items are clicked', () => {
+    const aboutButtons = screen.getAllByText(/About/i)
+    expect(aboutButtons.length).toBe(2)
+
+    fireEvent.click(aboutButtons[0])
+    expect(mockNavigate).toHaveBeenCalledWith('/about')
+
+    fireEvent.click(aboutButtons[1])
+    expect(mockNavigate).toHaveBeenCalledWith('/about')
+  })
+
+  test('navigates to the correct path when "Projects" menu items are clicked', () => {
+    const projectButtons = screen.getAllByText(/Projects/i);
+    expect(projectButtons.length).toBe(2)
+
+    fireEvent.click(projectButtons[0])
+    expect(mockNavigate).toHaveBeenCalledWith('/projects')
+
+    fireEvent.click(projectButtons[1])
+    expect(mockNavigate).toHaveBeenCalledWith('/projects')
+  })
+
+  test('navigates to the correct path when "Contacts" menu items are clicked', () => {
+    const contactButtons = screen.getAllByText(/Contacts/i)
+    expect(contactButtons.length).toBe(2)
+
+    fireEvent.click(contactButtons[0])
+    expect(mockNavigate).toHaveBeenCalledWith('/contacts')
+
+    fireEvent.click(contactButtons[1])
+    expect(mockNavigate).toHaveBeenCalledWith('/contacts')
   })
 })
 
