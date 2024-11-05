@@ -85,17 +85,17 @@ export default function ProjectsImageGallery() {
                     text-spring-100 p-2 cursor-pointer text-sm md:text-lg z-10 left-2.5">
                     ❮
                 </button>
-                <div className="">
+                <div className="md:w-[400px] lg:w-[600px] md:h-[266px] lg:h-[400px] overflow-hidden">
                     <img
                         src={project.images[currentImageIndex]}
                         alt={`Slide ${currentImageIndex + 1}`}
-                        className='md:w-[400px] lg:w-[600px]' />
+                        className='h-full w-full object-cover' />
                 </div>
                 <button
                     onClick={nextImage}
                     className="
-                    absolute self-center bg-amethyst-900 bg-opacity-30 text-spring-100 p-2
-                     cursor-pointer text-sm md:text-lg z-10 right-2.5">
+                        absolute self-center bg-amethyst-900 bg-opacity-30 text-spring-100 p-2
+                        cursor-pointer text-sm md:text-lg z-10 right-2.5">
                     ❯
                 </button>
             </div>
