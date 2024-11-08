@@ -1,5 +1,12 @@
 const projectData = [
     {
+        name: 'rent-it',
+        images: [
+
+        ],
+        description: 
+    }
+    {
         name: 'arcade_clone',
         images: [
             'https://live.staticflickr.com/65535/54030966927_836d6ac740_b.jpg',

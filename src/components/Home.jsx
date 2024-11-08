@@ -81,7 +81,7 @@ export default function Home() {
             h-72 truncate mt-36 sm:mt-0 
             text-center content-center">
                 <div className="font-play font-bold text-4xl sm:text-7xl lg:text-9xl">
-                    <span>My Portfolio</span>
+                    <span>My Latest Project</span>
                 </div>
             </section>
 
