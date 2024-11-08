@@ -6,6 +6,7 @@ import AnimatedInView from "./AnimatedInView"
 import ProjectData from "./ProjectData"
 
 export default function Home() {
+    
 
     return (
         <div className="p-6">
