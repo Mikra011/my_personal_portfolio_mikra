@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import projectData from '../assets/projectData';
 
-export default function ProjectsImageGallery() {
-    const project = projectData[0]
+export default function ProjectsImageGallery({ images }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
     const containerRef = useRef(null)
 
@@ -12,7 +10,7 @@ export default function ProjectsImageGallery() {
             const { scrollLeft, scrollWidth, clientWidth } = containerRef.current
             const maxScrollableDistance = scrollWidth - clientWidth
             const scrollFraction = scrollLeft / maxScrollableDistance
-            const newImageIndex = Math.round(scrollFraction * (project.images.length - 1))
+            const newImageIndex = Math.round(scrollFraction * (images.length - 1))
             setCurrentImageIndex(newImageIndex)
         }
     }
@@ -33,13 +31,13 @@ export default function ProjectsImageGallery() {
     // Functions for large screen navigation
     const prevImage = () => {
         setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
         )
     }
 
     const nextImage = () => {
         setCurrentImageIndex((prevIndex) =>
-            prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
         )
     }
 
@@ -69,7 +67,7 @@ export default function ProjectsImageGallery() {
                 flex overflow-x-scroll scrollbar-hide snap-x w-[300px] md:hidden"
                 ref={containerRef}
                 style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}>
-                {project.images.map((image, index) => (
+                {images.map((image, index) => (
                     <div key={index} className="snap-center flex-shrink-0" style={{ width: '100%' }}>
                         <img src={image} alt={`Slide ${index + 1}`} className='w-[300px]' />
                     </div>
@@ -87,7 +85,7 @@ export default function ProjectsImageGallery() {
                 </button>
                 <div className="md:w-[400px] lg:w-[600px] md:h-[266px] lg:h-[400px] overflow-hidden">
                     <img
-                        src={project.images[currentImageIndex]}
+                        src={images[currentImageIndex]}
                         alt={`Slide ${currentImageIndex + 1}`}
                         className='h-full w-full object-cover' />
                 </div>
@@ -102,7 +100,7 @@ export default function ProjectsImageGallery() {
 
             {/* Dots for navigation */}
             <div className="mt-4">
-                {project.images.map((_, index) => (
+                {images.map((_, index) => (
                     <span
                         key={index}
                         onClick={() => {

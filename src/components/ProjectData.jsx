@@ -1,10 +1,8 @@
 import React from 'react';
 import ProjectsImageGallery from './ProjectsImageGallery';
-import projectData from '../assets/projectData';
 import AnimatedInView from './AnimatedInView';
 
-export default function ProjectData() {
-    const { name, description } = projectData[0]
+export default function ProjectData({ project }) {
 
     return (
         <div
@@ -14,26 +12,27 @@ export default function ProjectData() {
             {/* Left side for images */}
 
             <AnimatedInView
-             baseClass="animated-left"
-             animationClass="animate-l"
-             threshold={0.2}>
+                baseClass="animated-left"
+                animationClass="animate-l"
+                threshold={0.2}>
                 <div className="flex lg:flex-row space-x-4">
-                    <ProjectsImageGallery />
+                    <ProjectsImageGallery images={project.images} />
                 </div>
             </AnimatedInView>
 
             {/* Right side for description */}
             <AnimatedInView
-             baseClass="animated-right"
-             animationClass="animate-r"
-             threshold={0.2}>
+                baseClass="animated-right"
+                animationClass="animate-r"
+                threshold={0.2}>
                 <div
                     className="
                         px-4 flex flex-col justify-between text-amethyst-900  bg-spring-200 h-full
                         dark:bg-amethyst-800 dark:text-spring-100 w-[300px] md:w-[400px] rounded-xl">
                     <div>
-                        <h2 className="text-2xl font-bold fon-play mb-4 mt-6">{name}</h2>
-                        <p className="font-kurale text-justify">{description}</p>
+                        <h2 className="text-2xl font-bold fon-play mb-4 mt-6">{project.name}</h2>
+
+                        <p className="font-kurale text-justify">{project.description}</p>
                     </div>
 
                     <div className='p-6 flex flex-row justify-between font-play font-bold'>

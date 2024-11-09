@@ -4,9 +4,10 @@ import CallToContact from "./CallToContact"
 import InteractiveText from "./InteractiveText"
 import AnimatedInView from "./AnimatedInView"
 import ProjectData from "./ProjectData"
+import projectData from '../assets/projectData';
 
 export default function Home() {
-    
+    const projects = projectData
 
     return (
         <div className="p-6">
@@ -90,7 +91,7 @@ export default function Home() {
             flex flex-col
             justify-center items-center">
                 
-                <ProjectData />
+                <ProjectData project={projects[0]}/>
 
                 <AnimatedInView
                     baseClass="animated-grow"
