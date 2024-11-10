@@ -37,7 +37,7 @@ export default function ProjectData({ project }) {
 
                     <div className='p-6 flex flex-row justify-between font-play font-bold'>
                         <a
-                            href="https://github.com/Mikra011/arcade_clone"
+                            href={project.github}
                             rel="noopener noreferrer"
                             target="_blank"
                             className='
@@ -47,7 +47,7 @@ export default function ProjectData({ project }) {
                                 bg-spring-100 dark:bg-amethyst-900'
                         >Github</a>
                         <a
-                            href="https://arcade-clone-front.onrender.com"
+                            href={project.link}
                             rel="noopener noreferrer"
                             target="_blank"
                             className='
