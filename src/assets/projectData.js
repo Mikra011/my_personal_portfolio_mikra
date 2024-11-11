@@ -13,11 +13,13 @@ const projectData = [
     {
         name: 'rent-it',
         images: [
-            'https://via.placeholder.com/600x400',
-            'https://via.placeholder.com/600x400',
-            'https://via.placeholder.com/600x400',
+            'https://live.staticflickr.com/65535/54131927058_39cd0f567e_k.jpg',
+            'https://live.staticflickr.com/65535/54131638686_1a664a2275_k.jpg',
+            'https://live.staticflickr.com/65535/54131926863_02957806e8_k.jpg',
+            'https://live.staticflickr.com/65535/54131926868_03eeff834d_k.jpg',
+            'https://live.staticflickr.com/65535/54131986839_809c5c4476_k.jpg',
         ],
-        description: 'The project is a rental app, built with Next.js, TypeScript, Supabase, Zod, and ShadCN, integrates Stripe for secure payments. Users can browse, book properties, leave feedback, and save favorites, while an admin dashboard provides site statistics and management tools for property listings and reservations. Stripe ensures smooth, secure checkouts. Feel free to check it out! (pictures coming soon)',
+        description: 'The project is a rental app, built with Next.js, TypeScript, Supabase, Zod, and ShadCN, integrates Stripe for secure payments. Users can browse, book properties, leave feedback, and save favorites, while an admin dashboard provides site statistics and management tools for property listings and reservations. Stripe ensures smooth, secure checkouts. Feel free to check it out!',
         github: "https://github.com/Mikra011/rent_it",
         link: "https://rent-it-8qq5.vercel.app/"
     }
