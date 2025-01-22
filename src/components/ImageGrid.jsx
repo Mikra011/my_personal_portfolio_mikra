@@ -12,9 +12,9 @@ const ImageGrid = ({ images }) => {
             {rows.map((row, rowIndex) => (
                 <div className="row h-24 sm:h-36 md:h-52 lg:h-60" key={rowIndex}>
                     {row.map((src, index) => (
-                        <img 
-                        key={index} src={src} 
-                        alt={`image-${rowIndex}-${index}`} />
+                        <img
+                            key={index} src={src}
+                            alt={`image-${rowIndex}-${index}`} />
                     ))}
                 </div>
             ))}

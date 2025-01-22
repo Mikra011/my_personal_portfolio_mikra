@@ -1,18 +1,15 @@
 // src/pages/About.js
-import React, { useState, useEffect } from "react"
+import { useEffect } from "react"
 import ImageGrid from "../components/ImageGrid"
-import ImageImporter from "../components/ImageImporter"
 import '../styles/parallaxpictures.css'
 import CallToContact from "./CallToContact";
 import Skills from "./Skills";
 import AnimatedInView from "./AnimatedInView";
 import ChangingText from "./ChangingText";
 import { useNavigate } from 'react-router-dom';
-import me from '../assets/Robert.jpg'
+import { AboutImages } from "../../public/AboutImages";
 
 export default function About() {
-    const [images, setImages] = useState([])
-
     const navigate = useNavigate()
 
     const handleContactClick = () => {
@@ -114,7 +111,7 @@ export default function About() {
                 <div>
                     <div>
                         <img 
-                        src={me} 
+                        src={"https://live.staticflickr.com/65535/54281667665_deb8543b7d_c.jpg"} 
                         alt="me" 
                         className="w-[200px] md:w-[300px] rounded-xl"/>
                     </div>
@@ -129,7 +126,7 @@ export default function About() {
                     </p>
                     <p className="mb-4">
                         I&apos;m Robert Toth-Ludanyi, an ambitious full-stack developer actively honing my skills through <span className="font-alfa">daily coding</span>, driven by a passion for building meaningful solutions and creating seamless user experiences.
-                        I am currently completing an 18-month program at <span className="font-alfa">Bloomtech Institute</span> (70% finished), where I&apos;ve been honing my skills in software development.
+                        I have completed a 12-month program at <span className="font-alfa">Bloomtech Institute</span>, where I&apos;ve been honing my skills in software development.
                     </p>
                     <p className="mb-4">
                         In addition to this, I hold a <span className="font-alfa">Bachelor&apos;s</span> Degree in Audio Engineering from <span className="font-alfa">Middlesex University</span>,
@@ -238,8 +235,7 @@ export default function About() {
             </section>
 
             <section className="h-vh-50 md:h-screen ">
-                <ImageImporter onImagesLoaded={setImages} />
-                <ImageGrid images={images} />
+                <ImageGrid images={AboutImages} />
             </section>
 
             <section className="p-8 pt-48 flex justify-center items-center">
