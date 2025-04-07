@@ -36,16 +36,20 @@ export default function ProjectData({ project }) {
                     </div>
 
                     <div className='p-6 flex flex-row justify-between font-play font-bold'>
-                        <a
-                            href={project.github}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className='
-                                flex items-center rounded-full 
-                                px-3 py-1 border-transparent border-2
-                                hover:border-oasis-600 hover:border-2
-                                bg-spring-100 dark:bg-amethyst-900'
-                        >Github</a>
+                        {project.github && (
+                            <a
+                                href={project.github}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className='
+                                    flex items-center rounded-full 
+                                    px-3 py-1 border-transparent border-2
+                                    hover:border-oasis-600 hover:border-2
+                                    bg-spring-100 dark:bg-amethyst-900'
+                            >
+                                Github
+                            </a>
+                        )}
                         <a
                             href={project.link}
                             rel="noopener noreferrer"

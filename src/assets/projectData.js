@@ -22,6 +22,16 @@ const projectData = [
         description: 'The project is a rental app, built with Next.js, TypeScript, Supabase, Zod, and ShadCN, integrates Stripe for secure payments. Users can browse, book properties, leave feedback, and save favorites, while an admin dashboard provides site statistics and management tools for property listings and reservations. Stripe ensures smooth, secure checkouts. Feel free to check it out!',
         github: "https://github.com/Mikra011/rent_it",
         link: "https://rent-it-8qq5.vercel.app/"
+    },
+    {
+        name: 'ritanit.hu',
+        images: [
+            'https://live.staticflickr.com/65535/54436335179_a23c96be5e_k.jpg',
+            'https://live.staticflickr.com/65535/54436148436_a7b2c1b7ec_k.jpg',
+            'https://live.staticflickr.com/65535/54435285347_6525e0898d_k.jpg'
+        ],
+        description: 'Built to meet an English teacher’s request for a lightweight and pink-themed solution, this simple scheduling app uses Calendly to fully automate student appointment bookings, making it easy and fun for her to manage her schedule. Feel free to check it out or book an appointment if you would like to boost your English skills!',
+        link: "https://ritanit.hu"
     }
 ]
 

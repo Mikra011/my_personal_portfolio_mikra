@@ -91,7 +91,7 @@ export default function Home() {
             flex flex-col
             justify-center items-center">
                 
-                <ProjectData project={projects[1]}/>
+                <ProjectData project={projects[2]}/>
 
                 <AnimatedInView
                     baseClass="animated-grow"
