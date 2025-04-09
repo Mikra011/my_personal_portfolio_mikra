@@ -19,3 +19,4 @@ const AnimatedInView = ({ children, baseClass = 'animated-up', animationClass = 
 }
 
 export default AnimatedInView;
+
